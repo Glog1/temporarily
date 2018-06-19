@@ -1,0 +1,262 @@
+@import "../includes/vars";
+@import "../includes/mixin";
+
+.c-header {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  position: relative;
+  @media only screen and (min-width: $desctop) {
+    margin-bottom: 40px;
+  }
+  @media only screen and (min-width: $tablet) {
+    margin-top: 30px;
+  }
+  &__burger {
+    padding-left: 15px;
+    z-index: 12;
+    @media only screen and (min-width: $tablet) {
+      display: none !important;
+    }
+    &--close {
+      display: none;
+      @media only screen and (min-width: $tablet) {
+        display: none !important;
+      }
+    }
+    &.active {
+      color: #ffffff;
+      .c-header__burger--open,
+      .c-header__burger-span {
+        display: none;
+      }
+      .c-header__burger--close {
+        display: block;
+        color: #ffffff;
+      }
+    }
+  }
+  &__link-wrap {
+    display: flex;
+    justify-content: space-around;
+    @media only screen and (max-width: $mobile-1) {
+      display: block;
+      text-align: right;
+    }
+  }
+  &__link {
+    font-family: $Lato-bk;
+    display: block;
+    color: $dark;
+    font-size: 12px;
+    @media only screen and (max-width: $tablet-1) {
+      font-size: 16px;
+    }
+    @media (min-width: $tablet) and (max-width: 1277px) {
+      font-size: 11px;
+    }
+    @media only screen and (max-width: 860px) {
+      font-size: 14px;
+
+    }
+    @media only screen and (min-width: $mobile) {
+      margin-right: 10px;
+    }
+    @media only screen and (min-width: $desctop) {
+      font-size: 13px;
+    }
+    @media only screen and (min-width: $desctop_lg) {
+      font-size: 14px;
+    }
+
+    &:hover,
+    &:focus {
+      color: $text;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    &--desctop{
+      @media only screen and (max-width: $mobile-1) {
+        display: none;
+
+      }
+    }
+  }
+  &__icon {
+    font-size: 16px;
+    vertical-align: middle;
+    margin-right: 5px;
+    @media only screen and (max-width: $tablet-1) {
+      margin-right: 10px;
+      font-size: 24px;
+    }
+    @media (min-width: $tablet) and (max-width: 1277px) {
+      font-size: 13px;
+    }
+    @media (min-width: $tablet) and (max-width: 1148px) {
+      display: none;
+    }
+    @media only screen and (min-width: 1390px) {
+      font-size: 18px;
+      margin-right: 10px;
+    }
+  }
+  &__count {
+    margin-left: 5px;
+  }
+  &__links {
+      padding-left: 0;
+
+    @media only screen and (max-width: $tablet-1) {
+      max-width: 100%;
+      flex: 1;
+    }
+    @media only screen and (max-width: $mobile-1) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      max-width: 50%;
+    }
+  }
+}
+
+.c-navigation {
+  &__wrapp {
+    position: relative;
+    @media only screen and (max-width: $tablet-1) {
+      flex-direction: column;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -26px;
+      z-index: 10;
+      background-color: $accent;
+      padding: 100px 0 50px;
+      opacity: 0;
+      visibility: hidden;
+      max-width: 100%;
+      @include transition(all, .35s, ease);
+      &.active {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+  box-sizing: border-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex: 0 1 auto;
+  -webkit-box-flex: 0;
+  flex: 0 1 auto;
+  -ms-flex-direction: row;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @media only screen and (max-width: $tablet-1) {
+    flex-direction: column;
+  }
+
+  &__item {
+    font: 700 12px $Lato-bd;
+    color: $text;
+    @media only screen and (max-width: $tablet-1) {
+      color: #ffffff;
+      text-transform: uppercase;
+      font-size: 20px;
+      padding-left: 15px;
+      margin-bottom: 25px;
+    }
+    @media only screen and (min-width: $tablet_lg) {
+      font-size: 14px;
+    }
+    @media only screen and (min-width: $desctop) {
+    }
+    @media only screen and (min-width: $desctop) {
+      font-size: 18px;
+    }
+    &:hover,
+    &:focus {
+      color: $text;
+    }
+    &--table {
+      margin-top: 30px;
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 20px;
+      padding-left: 15px;
+      display: inline-block;
+      @media only screen and (min-width: $tablet) {
+        display: none;
+
+      }
+    }
+  }
+}
+
+.c-form {
+  &__wrap {
+    @media only screen and (min-width: $desctop_lg) {
+      padding-left: 0;
+    }
+    @media only screen and (max-width: $tablet-1) {
+      max-width: 100%;
+      flex: 1;
+    }
+    @media only screen and (max-width: 860px) {
+      max-width: 30%;
+    }
+    @media only screen and (max-width: $mobile-1) {
+      margin-top: 20px;
+    }
+    @media only screen and (max-width: $mobile-1) {
+      max-width: 100%;
+      flex-basis: 100%;
+    }
+
+  }
+  position: relative;
+  &__input {
+    width: 100%;
+    height: 35px;
+    border: none;
+    padding: 5px 5px 5px 40px;
+    @media only screen and (min-width: $desctop_lg) {
+      height: 48px;
+      padding-left: 50px;
+    }
+  }
+  &__btn {
+    width: 100%;
+    height: 100%;
+    background: none;
+    border: none;
+  }
+  &__label {
+    position: absolute;
+    left: 0px;
+    top: 0;
+    margin-bottom: 0;
+    width: 40px;
+    height: 100%;
+    @media only screen and (min-width: $desctop_lg) {
+      width: 60px;
+    }
+  }
+  &__btn-icon {
+    position: absolute;
+    top: 11px;
+    left: 12px;
+    font-size: 15px;
+    @media only screen and (min-width: $desctop_lg) {
+      font-size: 18px;
+      top: 16px;
+      left: 20px;
+    }
+  }
+}
+
+

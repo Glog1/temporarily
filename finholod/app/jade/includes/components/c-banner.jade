@@ -1,0 +1,20 @@
+.c-banner
+    .container-fluid
+        .row
+            .col-lg-6.col-sm-8.c-banner__item-wrap
+                div(style="background-image: url('img/banner-1.png')").c-banner__item.c-banner__item--lg
+                    img(src="img/refrigerator.png" alt="alt").c-banner__img
+                    h2.c-banner__caption ПАРТНЕРСКАЯ ПРОГРАММА
+                    p.c-banner__subcaption для  мастеров
+                        +icon('right-arrow-white','c-banner__right-arrow')
+                    a(href="#").c-banner__btn Подробнее
+            .col-lg-3.col-sm-4.hidden-sm-down.c-banner__item-wrap
+                a( href="#" style="background-image: url('img/banner-2.png')").c-banner__item.c-banner__item--sm
+                    span.c-banner__brand Запчасти для
+                        br
+                        | холодильник Атлант
+                    span.c-banner__novelty
+                        span.c-banner__novelty-text Новинки
+                        +icon('right-arrow-white','c-banner__right-arrow c-banner__right-arrow--novelty')
+
+

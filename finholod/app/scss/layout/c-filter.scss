@@ -1,0 +1,105 @@
+@import "../includes/vars";
+@import "../includes/mixin";
+
+.c-filter{
+  background-color: #ffffff;
+  padding: 15px;
+  position: relative;
+  margin-bottom: 10px;
+  @media only screen and (min-width: $mobile){
+    margin-bottom: 25px;
+  }
+  @media only screen and (min-width: $tablet){
+    margin-bottom: 20px;
+  }
+  &.active{
+    .c-filter__icon{
+      @include rotate(180deg);
+    }
+  }
+  &__wrapp{
+    @media only screen and (max-width: 1024px){
+      flex-basis: 50%;
+      max-width: 50%;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+    @media only screen and (max-width: 1199px){
+      &:nth-child(1),
+      &:nth-child(2){
+        margin-bottom: 30px;
+      }
+    }
+    @media only screen and (max-width: 1024px){
+      margin-bottom: 15px;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+    @media only screen and (max-width: 768px){
+      margin-bottom: 0;
+      &:nth-child(1),
+      &:nth-child(2){
+        margin-bottom: 15px;
+      }
+    }
+  }
+  &__caption-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__icon{
+    font-size: 9px;
+    color: $dark;
+    @include transition(all, .35s, ease);
+    @media only screen and (min-width: $mobile){
+      font-size: 12px;
+    }
+    @media only screen and (min-width: $tablet){
+      font-size: 9px;
+    }
+    @media only screen and (min-width: $desctop){
+    }
+  }
+  &__dropdown{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    background-color: #ffffff;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 3;
+    @include transition(all, .35s, ease);
+    @include box-shadow(0, 15px, 15px, 0, rgba(88, 120, 131, 0.21));
+    &.active{
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  &__item{
+    display: block;
+    padding: 7px 5px;
+    margin: 0 15px;
+    border-top: 1px solid $main;
+    color: $dark;
+  }
+  &__caption{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+  }
+  &__caption,
+  &__item{
+    font-size: 14px;
+    @media only screen and (min-width: $mobile){
+      font-size: 20px;
+    }
+    @media only screen and (min-width: $tablet){
+      font-size: 12px;
+    }
+    @media only screen and (min-width: $desctop){
+      font-size: 16px;
+    }
+  }
+}

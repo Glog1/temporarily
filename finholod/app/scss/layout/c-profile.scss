@@ -1,0 +1,164 @@
+@import "../includes/vars";
+@import "../includes/mixin";
+
+.c-profile {
+  padding: 0 15px;
+  width: 100%;
+  @media only screen and (max-width: $tablet-1) {
+    max-width: 870px;
+    margin: 0 auto 100px;
+  }
+  @media only screen and (min-width: $tablet) {
+    max-width: 430px;
+  }
+  @media only screen and (min-width: $desctop) {
+    max-width: 560px;
+  }
+  &__caption-wrap {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    @media only screen and (min-width: 768px) {
+      margin-bottom: 55px;
+    }
+    @media only screen and (min-width: $tablet) {
+      margin-bottom: 24px;
+    }
+    @media only screen and (min-width: $desctop) {
+      margin-bottom: 30px;
+    }
+  }
+  &__caption {
+    font: 24px $Lato-bd;
+    margin-right: 45px;
+    @media only screen and (min-width: 420px) {
+      margin-right: 50px;
+    }
+    @media only screen and (min-width: 768px) {
+      font-size: 48px;
+      margin-right: 46px;
+    }
+    @media only screen and (min-width: 650px) {
+      margin-right: 100px;
+    }
+    @media only screen and (min-width: $tablet) {
+      font-size: 24px;
+      margin-right: 40px;
+    }
+    @media only screen and (min-width: $desctop) {
+      font-size: 30px;
+      margin-right: 65px;
+    }
+  }
+  &__history {
+    font: 700 18px $Lato-bd;
+    color: $silver2;
+    @media only screen and (min-width: 768px) {
+      font-size: 38px;
+    }
+    @media only screen and (min-width: $tablet) {
+      font-size: 18px;
+    }
+    @media only screen and (min-width: $desctop) {
+      font-size: 24px;
+    }
+  }
+  &__input-item{
+    margin-bottom: 30px;
+    @media only screen and (min-width: 768px) {
+      margin-bottom: 45px
+    }
+    @media only screen and (min-width: $tablet) {
+      margin-bottom: 20px
+    }
+    @media only screen and (min-width: $desctop) {
+      margin-bottom: 30px
+    }
+  }
+  &__label {
+    font: 16px $Lato-bd;
+    margin-bottom: 0;
+    width: 100%;
+    @media only screen and (min-width: 768px) {
+      display: flex;
+      align-items: center;
+      font-size: 26px;
+    }
+    @media only screen and (min-width: $tablet) {
+      font-size: 14px;
+    }
+    @media only screen and (min-width: $desctop) {
+      font-size: 16px;
+    }
+
+  }
+  &__input-title {
+    @media only screen and (max-width: 767px) {
+      margin-bottom: 20px;
+      display: block;
+    }
+    @media only screen and (min-width: 768px) {
+     width: 145px;
+    }
+    @media only screen and (min-width: $tablet) {
+      flex-basis: 26%;
+      max-width: 26%;
+    }
+
+    @media only screen and (min-width: $desctop) {
+      flex-basis: 20%;
+      max-width: 20%;
+    }
+
+
+  }
+  &__input{
+    margin: 0;
+    @media (max-width: $tablet-1) and (min-width: 768px) {
+      padding: 30px 33px 32px;
+    }
+
+
+  }
+  &__hint{
+    font: 14px/1.2 $Lato-bd;
+    color: $silver3;
+    display: block;
+    margin-top: 12px;
+    @media only screen and (min-width: 768px) {
+      font-size: 22px;
+      margin-left: 125px;
+    }
+    @media only screen and (min-width: $tablet) {
+      font-size: 12px;
+      margin-left: 21%;
+    }
+    @media only screen and (min-width: $desctop) {
+      font-size: 14px;
+      margin-left: 17%;
+    }
+  }
+  &__btn {
+    @media only screen and (max-width: 767px) {
+      text-align: center;
+    }
+  }
+
+}
+.button{
+  &--profile{
+    @media only screen and (max-width: 767px) {
+      font-size: 14px;
+      padding: 13px 38px;
+    }
+    @media only screen and (min-width: 768px) {
+      margin-left: 125px;
+    }
+    @media only screen and (min-width: $tablet) {
+      margin-left: 21%;
+    }
+    @media only screen and (min-width: $desctop) {
+      margin-left: 17%;
+    }
+  }
+}

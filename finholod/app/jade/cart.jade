@@ -1,0 +1,28 @@
+doctype html
+html
+      //include Head
+      include ./includes/head.jade
+      body
+            //Sprite
+            include ./includes/sprite.jade
+            .wrapper
+                  //Sidebar
+                  include ./includes/components/c-sidebar.jade
+                  main.main
+                        //.Header
+                        include ./includes/components/c-header.jade
+                        //Breadcrumbs
+                        include ./includes/components/c-breadcrumbs.jade
+                        //Cart caption
+                        include ./includes/components/c-cart-caption.jade
+                        form(action="/" method="post")
+                              //Cart table
+                              include ./includes/components/c-cart-table.jade
+                              //Order parameters
+                              include ./includes/components/c-order-parameters.jade
+            //Footer
+            include ./includes/components/c-footer.jade
+
+            //Scripts
+            include ./includes/scripts.jade
+

@@ -1,0 +1,171 @@
+@import "../includes/vars";
+@import "../includes/mixin";
+
+.c-cart-table {
+  background-color: #ffffff;
+  font-size: 22px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 60px;
+  @media only screen and (min-width: 420px) {
+    padding: 15px;
+  }
+  @media only screen and (min-width: $mobile) {
+    font-size: 18px;
+    padding: 15px 10px;
+
+  }
+  @media only screen and (min-width: 900px) {
+    font-size: 24px;
+  }
+  @media only screen and (min-width: $tablet) {
+    font-size: 14px;
+    padding: 10px 0;
+    margin-bottom: 40px;
+  }
+  @media only screen and (min-width: $desctop) {
+    font-size: 16px;
+    padding: 15px 0;
+    margin-bottom: 45px;
+  }
+  &__row {
+    margin-bottom: 20px;
+  }
+  &__column-caption,
+  &__column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    @media only screen and (min-width: $desctop) {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    &__column {
+      &--img {
+        max-width: 35%;
+        flex-basis: 35%;
+        align-items: flex-start;
+      }
+      &--desc {
+        max-width: 65%;
+        flex-basis: 65%;
+      }
+    }
+  }
+  &__product-inform {
+    text-align: center;
+  }
+  &__img {
+    margin: 0 auto;
+    display: block;
+    @media only screen and (min-width: $tablet) {
+      max-width: 84px;
+    }
+    @media only screen and (min-width: $desctop) {
+      max-width: 118px;
+    }
+  }
+  &__title {
+    font: 16px/1.2 $Lato-bd;
+    margin-bottom: 10px;
+    @media only screen and (min-width: 420px) {
+      margin-bottom: 25px;
+    }
+    @media only screen and (min-width: $mobile) {
+      font-size: 22px;
+      margin-bottom: 35px;
+    }
+    @media only screen and (min-width: 900px) {
+      font-size: 24px;
+    }
+    @media only screen and (min-width: $tablet) {
+      font-size: 16px;
+      margin-bottom: 35px;
+    }
+    @media only screen and (min-width: $desctop) {
+      font-size: 19px;
+      line-height: 1.5;
+      margin-bottom: 50px;
+    }
+  }
+  &__articul {
+    font-size: 14px;
+    margin-bottom: 10px;
+    @media only screen and (min-width: 420px) {
+      margin-bottom: 25px;
+    }
+    @media only screen and (min-width: $mobile) {
+      font-size: 18px;
+      margin-bottom: 35px;
+    }
+    @media only screen and (min-width: 900px) {
+      font-size: 20px;
+    }
+    @media only screen and (min-width: $tablet) {
+      font-size: 14px;
+    }
+    @media only screen and (min-width: $desctop) {
+      font-size: 16px;
+    }
+  }
+  &__count{
+    @media only screen and (min-width: 768px){
+      display: none !important;
+    }
+    font-size: 20px;
+    margin-bottom: 10px;
+    @media only screen and (min-width: 420px) {
+      margin-bottom: 25px;
+    }
+    span{
+      font-size: 22px;
+      margin-left: 5px;
+    }
+  }
+  &__price{
+    @media only screen and (min-width: 768px){
+      display: none !important;
+    }
+    font-family: $Lato-bd;
+    margin-bottom: 10px;
+    @media only screen and (min-width: 420px) {
+      margin-bottom: 25px;
+    }
+  }
+  &__product-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__delete {
+    background-color: transparent;
+    border: none;
+    @include transition(all, .35s, ease);
+    @media only screen and (max-width: $tablet-1) {
+      text-align: left;
+      font-size: 20px;
+      text-decoration: underline;
+      line-height: 2;
+      
+    }
+      &--icon {
+        font-size: 16px;
+        @media only screen and (min-width: $desctop) {
+          font-size: 22px;
+        }
+      }
+    &:hover,
+    &:focus {
+      color: $accent;
+      cursor: pointer;
+      &--icon {
+        @include scale(.95)
+      }
+    }
+  }
+}
+

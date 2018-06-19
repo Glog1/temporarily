@@ -1,0 +1,20 @@
+@import "../includes/vars";
+@import "../includes/mixin";
+.c-cart{
+  &__caption{
+    font: 36px $Lato-bd;
+    margin-bottom: 25px;
+    padding: 0 15px;
+    @media only screen and (min-width: $mobile){
+      margin-bottom: 50px;
+    }
+    @media only screen and (min-width: $tablet){
+      font-size: 22px;
+      margin-bottom: 30px;
+    }
+    @media only screen and (min-width: $desctop){
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+  }
+}

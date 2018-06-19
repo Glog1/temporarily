@@ -1,0 +1,37 @@
+.container-fluid
+    .row
+        .c-profile
+            .c-profile__caption-wrap
+                h1.c-profile__caption Профиль
+                a(href="#").c-profile__history История заказов
+            form(action="/" method="post")
+                .c-profile__input-item
+                    label.c-profile__label
+                        span.c-profile__input-title Логин
+                        input(type="text" required).main-input.required.c-profile__input
+                    span.c-profile__hint Укажите логин, email или номер телефона, которые вы использовали при регистрации.
+                .c-profile__input-item
+                    label.c-profile__label
+                        span.c-profile__input-title ФИО
+                        input(type="text" required).main-input.required.c-profile__input
+                    span.c-profile__hint Ваше полное ФИО
+                .c-profile__input-item
+                    label.c-profile__label
+                        span.c-profile__input-title E-mail
+                        input(type="email" required).main-input.required.c-profile__input
+                    span.c-profile__hint На указанный email придёт письмо со ссылкой для активации.
+                .c-profile__input-item
+                    label.c-profile__label
+                        span.c-profile__input-title Телефон
+                        input(type="text" required).main-input.required.c-profile__input.js-masked
+                .c-profile__input-item
+                    label.c-profile__label
+                        span.c-profile__input-title Пароль
+                        input(type="password" required).main-input.required.c-profile__input
+                .c-profile__input-item
+                    label.c-profile__label
+                        span.c-profile__input-title
+                        input(type="password" required).main-input.required.c-profile__input
+                    span.c-profile__hint Укажите пароль еще раз для исключения опечатки
+                .c-profile__btn
+                    button(type="submit").button.button--md.button--profile.send Сохранить

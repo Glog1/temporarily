@@ -1,0 +1,11 @@
+.c-logon
+    h2.c-logon__caption Войти в личный кабинет
+    form(action="/" method="post")
+        .c-profile__input-item
+            input(type="text" placeholder="Логин" required).main-input.main-input--plc-black.main-input--nomb.required
+            span.c-profile__hint.c-profile__hint--no-left Укажите логин, email или номер телефона, которые вы использовали при регистрации.
+        .c-profile__input-item
+            input(type="password" placeholder="Пароль" required).main-input.main-input--plc-black.main-input--nomb.required
+            span.c-profile__hint.c-profile__hint--no-left Если вы не помните свой пароль - просто оставьте это поле пустым, и вы получите новый, вместе со ссылкой на активацию.
+        .c-profile__btn
+            button(type="submit").button.button--login.send Войти

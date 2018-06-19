@@ -1,0 +1,227 @@
+@import "../includes/vars";
+@import "../includes/mixin";
+
+.c-order-parameters {
+  &__caption {
+    font: 22px $Lato-bd;
+    margin-bottom: 30px;
+    @media only screen and (min-width: 420px) {
+      font-size: 24px;
+    }
+    @media only screen and (min-width: $mobile) {
+      font-size: 26px;
+      margin-bottom: 35px;
+
+    }
+    @media only screen and (min-width: $tablet) {
+      font-size: 16px;
+      margin-bottom: 22px;
+
+    }
+    @media only screen and (min-width: 1040px) {
+      font-size: 17px;
+    }
+    @media only screen and (min-width: $desctop) {
+      font-size: 24px;
+      margin-bottom: 32px;
+
+    }
+  }
+
+}
+@media (min-width: 768px) and (max-width: $tablet-1) {
+.c-radios-wrap{
+    display: flex;
+  }
+  .c-radio-wrap{
+    flex-basis: 50%;
+    max-width: 50%;
+    &:first-child{
+      padding-right: 15px;
+    }
+    &:last-child{
+      padding-left: 15px;
+    }
+  }
+}
+.c-radio {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-bottom: 58px;
+  @media only screen and (min-width: 420px) {
+    padding: 30px;
+  }
+  @media only screen and (min-width: 768px) {
+    padding: 25px 20px;
+    margin-bottom: 30px;
+  }
+  @media only screen and (min-width: 900px) {
+    padding: 30px;
+  }
+  @media only screen and (min-width: $tablet) {
+    padding: 20px;
+    margin-bottom: 35px;
+
+  }
+  @media only screen and (min-width: 1250px) {
+    padding: 20px 25px;
+  }
+  @media only screen and (min-width: $desctop) {
+    padding: 25px 20px;
+    margin-bottom: 50px;
+  }
+  @media only screen and (min-width: $desctop_lg) {
+    padding: 30px;
+  }
+  &__label{
+    font-size: 16px;
+    margin-bottom: 0px;
+    @media only screen and (min-width: 420px) {
+      font-size: 20px;
+    }
+    @media only screen and (min-width: $mobile) {
+      font-size: 21px;
+
+    }
+    @media only screen and (min-width: 800px) {
+      font-size: 22px;
+    }
+    @media only screen and (min-width: $tablet) {
+      font-size: 14px;
+    }
+    @media only screen and (min-width: $desctop) {
+      font-size: 17px;
+    }
+    @media only screen and (min-width: $desctop_lg) {
+      font-size: 18px;
+    }
+  }
+  &__item {
+    margin-bottom: 25px;
+    @media only screen and (min-width: 420px) {
+      margin-bottom: 30px;
+    }
+    @media only screen and (min-width: $mobile) {
+      margin-bottom: 35px;
+
+    }
+    @media only screen and (min-width: $tablet) {
+      margin-bottom: 22px;
+    }
+    @media only screen and (min-width: $desctop) {
+      margin-bottom: 30px;
+    }
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
+.c-ordering-form{
+  margin-bottom: 58px;
+  @media only screen and (min-width: 768px) {
+    margin-bottom: 30px;
+  }
+  @media only screen and (min-width: $tablet) {
+    margin-bottom: 35px;
+
+  }
+  @media only screen and (min-width: $desctop) {
+    margin-bottom: 50px;
+  }
+}
+.c-ordering{
+  background-color: #ffffff;
+  padding: 20px;
+  margin-bottom: 25px;
+  @media only screen and (min-width: 420px) {
+    padding: 30px;
+  }
+  @media only screen and (min-width: 768px) {
+    padding: 25px 20px;
+  }
+  @media only screen and (min-width: 900px) {
+    padding: 30px;
+  }
+  @media only screen and (min-width: $tablet) {
+    padding: 20px;
+
+  }
+  @media only screen and (min-width: 1250px) {
+    padding: 20px 25px;
+  }
+  @media only screen and (min-width: $desctop) {
+    padding: 25px 20px;
+  }
+  @media only screen and (min-width: $desctop_lg) {
+    padding: 30px;
+  }
+  &__caption{
+    font: 18px $Lato-bk;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    @media only screen and (min-width: 420px) {
+      margin-bottom: 40px;
+    }
+    @media only screen and (min-width: $mobile) {
+      font-size: 20px;
+    }
+    @media only screen and (min-width: $tablet) {
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+    @media only screen and (min-width: $desctop) {
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__total{
+    display: block;
+    font: 36px $Lato-bd;
+    margin-bottom: 25px;
+    @media only screen and (min-width: 420px) {
+      margin-bottom: 45px;
+    }
+    @media only screen and (min-width: $mobile) {
+      font-size: 40px;
+      margin-bottom: 46px;
+    }
+    @media only screen and (min-width: $tablet) {
+      font-size: 26px;
+      margin-bottom: 30px;
+    }
+    @media only screen and (min-width: $desctop) {
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+  }
+  &__personal-data{
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    @media only screen and (min-width: 420px) {
+      margin-bottom: 32px;
+    }
+    @media only screen and (min-width: $mobile) {
+      font-size: 18px;
+      line-height: 1.4;
+    }
+    @media only screen and (min-width: $tablet) {
+      font-size: 12px;
+      margin-bottom: 20px;
+    }
+    @media only screen and (min-width: $desctop) {
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+    &--link{
+      text-decoration: underline;
+      color: $dark;
+      margin-left: 5px;
+
+    }
+  }
+  &__button-wrap{
+    text-align: center;
+  }
+}

@@ -1,0 +1,22 @@
+doctype html
+html
+      //include Head
+      include ./includes/head.jade
+      body
+            //Sprite
+            include ./includes/sprite.jade
+            .wrapper
+                  //Sidebar
+                  include ./includes/components/c-sidebar.jade
+                  main.main
+                        //.Header
+                        include ./includes/components/c-header.jade
+                        //Breadcrumbs
+                        include ./includes/components/c-breadcrumbs.jade
+                        //Profile
+                        include ./includes/components/c-profile.jade
+            //Footer
+            include ./includes/components/c-footer.jade
+            //Scripts
+            include ./includes/scripts.jade
+

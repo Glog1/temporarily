@@ -1,0 +1,49 @@
+@import "../includes/vars";
+@import "../includes/mixin";
+
+.c-logon{
+  margin-bottom: 50px;
+  margin-top: 25px;
+  &--last{
+    margin-bottom: 70px;
+  }
+  @media only screen and (min-width: $mobile) {
+    margin-bottom: 50px;
+    margin-top: 50px;
+    &--last{
+      margin-bottom: 150px;
+    }
+  }
+  @media only screen and (max-width: $tablet-1) {
+    max-width: 840px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media only screen and (min-width: $tablet) {
+    margin-bottom: 0;
+  }
+  @media only screen and (min-width: $tablet) {
+    margin-top: 30px;
+
+  }
+  &__caption{
+    font: 24px $Lato-bd;
+    margin-bottom: 35px;
+    @media only screen and (min-width: $mobile) {
+      font-size: 48px;
+      margin-bottom: 75px;
+    }
+    @media only screen and (min-width: $tablet) {
+      font-size: 20px;
+      margin-bottom: 35px;
+    }
+    @media only screen and (min-width: $desctop) {
+      font-size: 24px;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.c-profile__hint--no-left{
+  margin-left: 0 !important;
+}

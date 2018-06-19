@@ -1,0 +1,40 @@
+.c-header
+    .container-fluid
+        .row.align-items-center
+            a(href="#").c-header__link.c-header__burger
+                +icon('list','c-header__icon c-header__burger--open')
+                +icon('multiply','c-header__icon c-header__burger--close')
+                span.c-header__burger-span Меню
+            .col-md-6.c-navigation__wrapp
+                nav.c-navigation
+                    a(href="#").c-navigation__item О компании
+                    a(href="#").c-navigation__item Каталог
+                    a(href="#").c-navigation__item Гарантия
+                    a(href="#").c-navigation__item Доставка
+                    a(href="#").c-navigation__item Оплата
+                a(href="#").c-navigation__item--table
+                    +icon('lock','c-header__icon')
+                    | Личный кабинет
+            .col-md-3.c-form__wrap
+                form(action="/" method="POST").c-form
+                    input(type="text").c-form__input
+                    label.c-form__label
+                        button(type="submit" ).c-form__btn
+                            +icon('search','c-form__btn-icon')
+            .col-md-3.c-header__links
+                .c-header__link-wrap
+                    a(href="cart.html").c-header__link
+                        +icon('shopping-cart2','c-header__icon')
+                        | Корзина
+                        span.c-header__count (25)
+                    a(href="#").c-header__link.c-header__link--desctop
+                        +icon('lock','c-header__icon')
+                        | Личный кабинет
+
+
+
+
+
+
+
+

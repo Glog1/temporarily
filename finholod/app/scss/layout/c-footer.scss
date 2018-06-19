@@ -1,0 +1,82 @@
+@import "../includes/vars";
+@import "../includes/mixin";
+.c-footer{
+  padding: 22px 0;
+  @media only screen and (min-width: 769px){
+    padding: 44px 0;
+  }
+  @media only screen and (min-width: $tablet){
+    display: none !important;
+  }
+  &__logo{
+    display: block;
+    text-align: center;
+    @media only screen and (max-width: 768px){
+      margin-bottom: 30px;
+    }
+  }
+  &__logo-img{
+    @media only screen and (max-width: 768px) {
+      max-width: 143px;
+    }
+  }
+  &__item-wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__navigation{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    @media only screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+    @media only screen and (max-width: 420px) {
+      margin-bottom: 20px;
+    }
+
+  }
+  &__navigation-item{
+    color: $dark;
+    font: 700 12px/1.7 $Lato-bd;
+    @media only screen and (min-width: 421px){
+      font-size: 16px;
+    }
+    @media only screen and (min-width: 768px){
+      font-size: 21px;
+    }
+  }
+  &__link{
+    font-size: 14px;
+    display: block;
+    color: $silver;
+    &--copyright{
+      font-size: 12px;
+      @media only screen and (min-width: 768px){
+        font-size: 19px;
+      }
+    }
+    @media only screen and (max-width: 767px) {
+      text-align: center;
+    }
+    @media only screen and (min-width: 421px){
+      font-size: 17px;
+    }
+    @media only screen and (min-width: 768px){
+      font-size: 21px;
+    }
+  }
+  &__copyright{
+    flex: 1;
+    text-align: center;
+    padding: 0 5px;
+    margin-top: 20px;
+    @media only screen and (min-width: 421px){
+      margin-top: 27px;
+    }
+    @media only screen and (min-width: 768px){
+      margin-top: 70px;
+    }
+  }
+}

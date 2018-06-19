@@ -1,0 +1,27 @@
+doctype html
+html
+      //include Head
+      include ./includes/head.jade
+      body
+            //Sprite
+            include ./includes/sprite.jade
+            .wrapper
+                  //Sidebar
+                  include ./includes/components/c-sidebar.jade
+                  main.main
+                        //.Header
+                        include ./includes/components/c-header.jade
+                        .container-fluid
+                              .row
+                                    .g-col-4-5
+                                          //Login
+                                          include ./includes/components/c-login.jade
+                                    .g-col-4-5.offset-md-1
+                                          //Login
+                                          include ./includes/components/c-logon.jade
+            //Footer
+            include ./includes/components/c-footer.jade
+
+            //Scripts
+            include ./includes/scripts.jade
+
