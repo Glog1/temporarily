@@ -1,0 +1,27 @@
+@import "vars";
+.button{
+  display: inline-block;
+  font: 500 12px $Ub-md;
+  letter-spacing: 0.14px;
+  padding: 9px 10px 11px;
+  background-color: $accent;
+  color: #ffffff;
+  border: none;
+  @include box-shadow(2px, 3px, 5px, 1px, rgba(0, 0, 0, 0.24));
+  @include border-radius(2px);
+  @include transition(all, .35s, ease);
+  &:hover,
+  &:focus{
+    background-color: $hover;
+    color: #ffffff;
+  }
+  &:active{
+    background-color: $pressed;
+    @include box-shadow(0, 13px, 19px, 1px, rgba(0, 0, 0, 0.24));
+    color: #ffffff;
+  }
+  @media only screen and (min-width: $mobile) {
+    font-size: 14px;
+    padding: 9px 18px 11px;
+  }
+}

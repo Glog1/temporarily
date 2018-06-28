@@ -1,0 +1,123 @@
+@import "../includes/vars";
+@import "../includes/mixin";
+@import "../includes/sprite";
+@import "../includes/button";
+::placeholder {
+  color: #929292;
+  font-family: $default-font;
+}
+
+::selection {
+  background-color: $accent;
+  color: #fff;
+}
+
+body {
+  font-size: 16px;
+  position: relative;
+  line-height: 1.3333;
+  font-family: $default-font;
+  color: $dark;
+  margin: 0;
+  * {
+    outline: none;
+    box-sizing: border-box;
+    &:hover,
+    &:focus {
+      outline: none;
+    }
+  }
+  &.hidden{
+    overflow: hidden;
+  }
+}
+
+img {
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+input, textarea {
+  border: #666 1px solid;
+  outline: none;
+  &:focus:required:invalid {
+    border-color: $error;
+  }
+  &:required:valid {
+    border-color: green;
+  }
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.main-input {
+  background-color: #fff;
+  padding: 19px 25px 17px;
+  border: 1px solid $main;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  display: block;
+  width: 100%;
+  margin-bottom: 23px;
+  @include transition(all, .35s, ease)
+}
+a {
+  text-decoration: none;
+  color: $dark;
+  @include transition(all, .35s, ease);
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: $hover;
+  }
+}
+ul,li{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+p{
+  color: $text;
+}
+.g-container{
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.g-row{
+  box-sizing: border-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex: 0 1 auto;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -ms-flex-direction: row;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+
+.nicescroll-rails{
+  background-color: $main;
+}
+
+//HEADER
+@import "./c-header";
+//Valuation
+@import "./c-valuation";

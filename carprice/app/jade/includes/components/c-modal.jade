@@ -1,0 +1,24 @@
+.c-modal__overlay
+    .c-modal#rate
+        .c-modal__close
+            +icon('close','c-modal__close-icn')
+        h2.c-modal__caption Оставьте заявку
+        h3.c-modal__sub-caption Менеджер перезвонит и ответит на все вопросы
+        form(action="#" method="post").c-modal__form
+            input(type="text" placeholder="Имя" required).main-input.main-input--plc-black.main-input--modal.required
+            input(type="text" placeholder="Телефон" required).main-input.main-input--plc-black.main-input--modal.required.js-masked
+            textarea(placeholder="Комментарий о детали" required).main-input.main-input--plc-black.main-input--modal.required.c-modal__textarea
+            .c-profile__input-item.c-modal__item
+                .main-checkbox
+                    input#checkbox.main-checkbox__check(type='checkbox', style='display: none')
+                    label.main-checkbox__label(for='checkbox')
+                        span.main-checkbox__item.main-checkbox__item--icon
+                            svg(width='12px', height='10px', viewbox='0 0 12 10').main-checkbox__svg
+                                polyline(points='1.5 6 4.5 9 10.5 1')
+                        span.main-checkbox__label-text.c-modal__label-text Отправляя сообщение, я принимаю
+                            a(href="").main-checkbox__label-link пользовательское соглашение
+                            | и подтверждаю, что ознакомлен и согласен с
+                            a(href="#").main-checkbox__label-link политикой конфиденциальности
+                            | данного сайта
+            .c-modal__btn
+                button(type="submit").button.send Отправить

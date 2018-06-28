@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+  <!--include Head-->
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>CarPrice</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/main.min.css">
+  </head>
+  <body>
+    <!--Sprite-->
+    <!--Header-->
+    <header class="c-header">
+      <div class="c-header__top-line">
+        <div class="g-container">
+          <div class="g-row c-header__row"><a class="c-header__logo" href="/">
+                  <svg class="icon icon-logo c-header__logo-img">
+                    <use xlink:href="img/sprite/sprite.svg#logo"></use>
+                  </svg>
+              <p class="c-header__logo-desc">Сервис №1 по продаже автомобилей с пробегом</p></a>
+            <div class="c-header__right">
+              <div class="c-location"><span class="c-location__select">
+                      <svg class="icon icon-location c-location__loc-icn">
+                        <use xlink:href="img/sprite/sprite.svg#location"></use>
+                      </svg><span class="c-location__name">Москва</span>
+                      <svg class="icon icon-arrow_down c-location__arrow-icn">
+                        <use xlink:href="img/sprite/sprite.svg#arrow_down"></use>
+                      </svg></span>
+                <div class="c-location__list-wrap">
+                  <ul class="c-location__list js-scroll">
+                    <li class="c-location__list-item"><a class="c-location__list-item" href="">Москва</a>
+                      <ul class="c-location__list-child">
+                        <li class="c-location__list-item"><a class="c-location__list-child-item" href="">МО</a></li>
+                      </ul>
+                    </li>
+                    <li class="c-location__list-item"><a class="c-location__list-item" href="">Санкт-Петербург</a>
+                      <ul class="c-location__list-child">
+                        <li class="c-location__list-item"><a class="c-location__list-child-item" href="">Петербургская область</a></li>
+                      </ul>
+                    </li>
+                    <li class="c-location__list-item"><a class="c-location__list-item" href="">Абакан</a></li>
+                    <li class="c-location__list-item"><a class="c-location__list-item" href="">Белгород</a></li>
+                    <li class="c-location__list-item"><a class="c-location__list-item" href="">Великий Новгород</a></li>
+                    <li class="c-location__list-item"><a class="c-location__list-item" href="">Владимир</a></li>
+                    <li class="c-location__list-item"><a class="c-location__list-item" href="">Волгоград</a></li>
+                    <li class="c-location__list-item"><a class="c-location__list-item" href="">Великий Новгород2</a></li>
+                    <li class="c-location__list-item"><a class="c-location__list-item" href="">Великий Новгород3</a></li>
+                    <li class="c-location__list-item"><a class="c-location__list-item" href="">Великий Новгород2</a></li>
+                    <li class="c-location__list-item"><a class="c-location__list-item" href="">Великий Новгород3</a></li>
+                  </ul>
+                </div>
+              </div><a class="button c-header__btn" href="#">Оценить авто</a>
+              <!--Burger-->
+              <div class="c-header__burger-wrapp">
+                <div class="c-header__burger">
+                  <div class="c-header__burger--icon"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="c-navbar-wrap">
+        <div class="g-container">
+          <div class="g-row">
+            <nav class="c-navbar"><a class="c-navbar__item" href="#">Оценка авто</a><a class="c-navbar__item" href="#">Советы</a><a class="c-navbar__item" href="#">Отзывы</a><a class="c-navbar__item" href="#">Вопросы и ответы</a></nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--Valuation-->
+    <section class="c-valuation">
+      <div class="g-container">
+        <div class="g-row">
+          <div class="c-valuation__bg-img" style="background-image: url('img/valuation.png')">
+            <div class="c-valuation__apparition">
+              <h1 class="c-valuation__caption">Как за 2 часа выгодно продать авто в Москве</h1>
+              <div class="c-valuation__content">
+                <h2 class="c-valuation__subcaption">Гарантированно купим любой автомобиль комфортно и безопасно</h2>
+                <h3 class="c-valuation__desc">Вся сумма выплачивается наличными или переводом на банковскую карту сразу после принятия решения о продаже автомобиля</h3>
+              </div><a class="button" href="#">Продать автомобиль</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Features-->
+    <section class="c-features">
+      <div class="g-container">
+        <div class="g-row">
+          <div class="c-features__item">
+                <svg class="icon icon-stopwatch c-features__icn">
+                  <use xlink:href="img/sprite/sprite.svg#stopwatch"></use>
+                </svg>
+            <h3 class="c-features__caption">Быстро</h3>
+            <p class="c-features__desc">Техническая диагностика, онлайн-аукцион, оформление документов и выдача денег за 2 часа.</p>
+          </div>
+          <div class="c-features__item">
+                <svg class="icon icon-hand c-features__icn">
+                  <use xlink:href="img/sprite/sprite.svg#hand"></use>
+                </svg>
+            <h3 class="c-features__caption">Выгодно</h3>
+            <p class="c-features__desc">Цена на 20% выше, чем в автосалонах по программе Trade-In, благодаря конкуренции 27 000 аккредитованных автодилеров.</p>
+          </div>
+          <div class="c-features__item">
+                <svg class="icon icon-shield c-features__icn">
+                  <use xlink:href="img/sprite/sprite.svg#shield"></use>
+                </svg>
+            <h3 class="c-features__caption">Безопасно</h3>
+            <p class="c-features__desc">CarPrice гарантирует юридическую «чистоту» сделки. Заключается договор и выплачивается  вся сумма без каких-либо комиссий и удержаний.</p>
+          </div>
+          <div class="c-features__item">
+                <svg class="icon icon-coffee-cup c-features__icn">
+                  <use xlink:href="img/sprite/sprite.svg#coffee-cup"></use>
+                </svg>
+            <h3 class="c-features__caption">Комфортно</h3>
+            <p class="c-features__desc">Приезжайте в удобное время в ближайший филиал Карпрайса, где на мягком диване с кофе будете наблюдать за продажей.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Steps-->
+    <section class="c-steps-wrap">
+      <div class="g-container">
+        <div class="g-row">
+          <div class="c-steps__col c-steps__col--md-4">
+            <h2 class="c-steps__caption">Несколько простых шагов, которые приведут тебя к цели</h2>
+            <ol class="c-step">
+              <li class="c-step__item active"><span class="c-step__title" data-main="a">Отправь заявку</span>
+                <div class="c-step__content">
+                  <p class="c-step__desc">Узнай стоимость авто, заполнив<br>простую форму, и дождись<br>звонка менеджера.</p><a class="button c-step__btn" href="#">Отправить</a>
+                </div>
+              </li>
+              <li class="c-step__item"><span class="c-step__title" data-main="b">Пройди бесплатную диагностику</span>
+                <div class="c-step__content">
+                  <p class="c-step__desc">Узнай стоимость авто, заполнив простую форму, и дождись звонка менеджера.</p>
+                </div>
+              </li>
+              <li class="c-step__item"><span class="c-step__title" data-main="c">Участвуй в онлайн-аукционе</span>
+                <div class="c-step__content">
+                  <p class="c-step__desc">Узнай стоимость авто, заполнив простую форму, и дождись звонка</p>
+                </div>
+              </li>
+              <li class="c-step__item"><span class="c-step__title" data-main="d">Получи деньги</span>
+                <div class="c-step__content">
+                  <p class="c-step__desc">Узнай стоимость авто, заполнив простую форму, и дождись звонка</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+          <div class="c-steps__col c-steps__col--md-6">
+            <figure class="c-steps__figure active" data-child="a"><img src="img/step-1.jpg" alt="step"></figure>
+            <figure class="c-steps__figure" data-child="b"><img src="img/step-2.jpg" alt="step"></figure>
+            <figure class="c-steps__figure" data-child="c"><img src="img/step-3.jpg" alt="step"></figure>
+            <figure class="c-steps__figure" data-child="d"><img src="img/step-4.jpg" alt="step"></figure>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Banner-->
+    <section class="c-banner c-banner--black" style="background-image: url('img/register.jpg')">
+      <div class="g-container">
+        <div class="g-row">
+          <div class="c-banner__content">
+            <h2 class="c-banner__caption">Запишись на продажу автомобиля.<br>Если цена не устроит — ничего не потеряешь</h2><a class="button" href="#">Записаться</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Comparison-->
+    <section class="c-comparison">
+      <div class="g-container">
+        <div class="g-row">
+          <div class="c-comparison__item c-comparison__item--carprice">
+            <div class="c-comparison__choice c-comparison__choice--carprice">
+              <div class="c-comparison__caption c-comparison__caption--carprice">
+                <h2 class="c-comparison__title c-comparison__title--white">CarPrice</h2>
+              </div>
+              <ul class="c-comparison__list">
+                <li class="c-comparison__list-item">
+                  <!--+icon('close','c-comparison__icn c-comparison__icn--not-receive')-->
+                      <svg class="icon icon-check c-comparison__icn c-comparison__icn--chek">
+                        <use xlink:href="img/sprite/sprite.svg#check"></use>
+                      </svg>Быстро
+                </li>
+                <li class="c-comparison__list-item">
+                      <svg class="icon icon-check c-comparison__icn c-comparison__icn--chek">
+                        <use xlink:href="img/sprite/sprite.svg#check"></use>
+                      </svg>Безопасно
+                </li>
+                <li class="c-comparison__list-item">
+                      <svg class="icon icon-check c-comparison__icn c-comparison__icn--chek">
+                        <use xlink:href="img/sprite/sprite.svg#check"></use>
+                      </svg>Деньги сразу
+                </li>
+                <li class="c-comparison__list-item">
+                      <svg class="icon icon-check c-comparison__icn c-comparison__icn--chek">
+                        <use xlink:href="img/sprite/sprite.svg#check"></use>
+                      </svg>Комфортно
+                </li>
+                <li class="c-comparison__list-item">
+                      <svg class="icon icon-check c-comparison__icn c-comparison__icn--chek">
+                        <use xlink:href="img/sprite/sprite.svg#check"></use>
+                      </svg>Выгодно
+                </li>
+              </ul><a class="button c-comparison__btn" href="#">Выбрать</a>
+            </div>
+          </div>
+          <div class="c-comparison__item">
+            <div class="c-comparison__choice">
+              <div class="c-comparison__caption">
+                <h3 class="c-comparison__title">Автосалоны</h3>
+              </div>
+              <ul class="c-comparison__list">
+                <li class="c-comparison__list-item">
+                      <svg class="icon icon-check c-comparison__icn c-comparison__icn--chek">
+                        <use xlink:href="img/sprite/sprite.svg#check"></use>
+                      </svg>Быстро
+                </li>
+                <li class="c-comparison__list-item">
+                      <svg class="icon icon-check c-comparison__icn c-comparison__icn--chek">
+                        <use xlink:href="img/sprite/sprite.svg#check"></use>
+                      </svg>Безопасно
+                </li>
+                <li class="c-comparison__list-item c-comparison__list-item--not-receiv">
+                      <svg class="icon icon-cross c-comparison__icn">
+                        <use xlink:href="img/sprite/sprite.svg#cross"></use>
+                      </svg>Деньги сразу
+                </li>
+                <li class="c-comparison__list-item c-comparison__list-item--not-receiv">
+                      <svg class="icon icon-cross c-comparison__icn">
+                        <use xlink:href="img/sprite/sprite.svg#cross"></use>
+                      </svg>Комфортно
+                </li>
+                <li class="c-comparison__list-item c-comparison__list-item--not-receiv">
+                      <svg class="icon icon-cross c-comparison__icn">
+                        <use xlink:href="img/sprite/sprite.svg#cross"></use>
+                      </svg>Выгодно
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="c-comparison__item">
+            <div class="c-comparison__choice">
+              <div class="c-comparison__caption">
+                <h3 class="c-comparison__title">Перекупщики</h3>
+              </div>
+              <ul class="c-comparison__list">
+                <li class="c-comparison__list-item">
+                      <svg class="icon icon-check c-comparison__icn c-comparison__icn--chek">
+                        <use xlink:href="img/sprite/sprite.svg#check"></use>
+                      </svg>Быстро
+                </li>
+                <li class="c-comparison__list-item c-comparison__list-item--not-receiv">
+                      <svg class="icon icon-cross c-comparison__icn">
+                        <use xlink:href="img/sprite/sprite.svg#cross"></use>
+                      </svg>Безопасно
+                </li>
+                <li class="c-comparison__list-item">
+                      <svg class="icon icon-check c-comparison__icn c-comparison__icn--chek">
+                        <use xlink:href="img/sprite/sprite.svg#check"></use>
+                      </svg>Деньги сразу
+                </li>
+                <li class="c-comparison__list-item c-comparison__list-item--not-receiv">
+                      <svg class="icon icon-cross c-comparison__icn">
+                        <use xlink:href="img/sprite/sprite.svg#cross"></use>
+                      </svg>Комфортно
+                </li>
+                <li class="c-comparison__list-item c-comparison__list-item--not-receiv">
+                      <svg class="icon icon-cross c-comparison__icn">
+                        <use xlink:href="img/sprite/sprite.svg#cross"></use>
+                      </svg>Выгодно
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="c-comparison__item">
+            <div class="c-comparison__choice">
+              <div class="c-comparison__caption">
+                <h3 class="c-comparison__title">Объявления</h3>
+              </div>
+              <ul class="c-comparison__list">
+                <li class="c-comparison__list-item c-comparison__list-item--not-receiv">
+                      <svg class="icon icon-cross c-comparison__icn">
+                        <use xlink:href="img/sprite/sprite.svg#cross"></use>
+                      </svg>Быстро
+                </li>
+                <li class="c-comparison__list-item c-comparison__list-item--not-receiv">
+                      <svg class="icon icon-cross c-comparison__icn">
+                        <use xlink:href="img/sprite/sprite.svg#cross"></use>
+                      </svg>Безопасно
+                </li>
+                <li class="c-comparison__list-item c-comparison__list-item--not-receiv">
+                      <svg class="icon icon-cross c-comparison__icn">
+                        <use xlink:href="img/sprite/sprite.svg#cross"></use>
+                      </svg>Деньги сразу
+                </li>
+                <li class="c-comparison__list-item c-comparison__list-item--not-receiv">
+                      <svg class="icon icon-cross c-comparison__icn">
+                        <use xlink:href="img/sprite/sprite.svg#cross"></use>
+                      </svg>Комфортно
+                </li>
+                <li class="c-comparison__list-item">
+                      <svg class="icon icon-check c-comparison__icn c-comparison__icn--chek">
+                        <use xlink:href="img/sprite/sprite.svg#check"></use>
+                      </svg>Выгодно
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Reviews-->
+    <section class="c-reviews-wrap">
+      <div class="g-container">
+        <div class="g-row">
+          <h2 class="c-reviews-caption">Отзывы тех, кто реально продал</h2>
+        </div>
+        <div class="g-row">
+          <div class="carousel">
+            <div class="c-reviews">
+              <div class="c-reviews__item"><a class="c-reviews__thumb js-popup-youtube" href="http://www.youtube.com/watch?v=0O2aH4XLbto"><img class="c-reviews__img" src="img/reviews/item-1.png" alt="alt"></a></div>
+              <div class="c-reviews__item"><a class="c-reviews__thumb js-popup-youtube" href="http://www.youtube.com/watch?v=0O2aH4XLbto"><img class="c-reviews__img" src="img/reviews/item-2.png" alt="alt"></a></div>
+              <div class="c-reviews__item"><a class="c-reviews__thumb js-popup-youtube" href="http://www.youtube.com/watch?v=0O2aH4XLbto"><img class="c-reviews__img" src="img/reviews/item-3.png" alt="alt"></a></div>
+              <div class="c-reviews__item"><a class="c-reviews__thumb js-popup-youtube" href="http://www.youtube.com/watch?v=0O2aH4XLbto"><img class="c-reviews__img" src="img/reviews/item-1.png" alt="alt"></a></div>
+              <div class="c-reviews__item"><a class="c-reviews__thumb js-popup-youtube" href="http://www.youtube.com/watch?v=0O2aH4XLbto"><img class="c-reviews__img" src="img/reviews/item-2.png" alt="alt"></a></div>
+              <div class="c-reviews__item"><a class="c-reviews__thumb js-popup-youtube" href="http://www.youtube.com/watch?v=0O2aH4XLbto"><img class="c-reviews__img" src="img/reviews/item-3.png" alt="alt"></a></div>
+            </div>
+            <button class="carousel__btn carousel__btn--prev">
+                  <svg class="icon icon-arrow-left carousel__btn-icn">
+                    <use xlink:href="img/sprite/sprite.svg#arrow-left"></use>
+                  </svg>
+            </button>
+            <button class="carousel__btn carousel__btn--next">
+                  <svg class="icon icon-arrow-right carousel__btn-icn">
+                    <use xlink:href="img/sprite/sprite.svg#arrow-right"></use>
+                  </svg>
+            </button>
+          </div>
+          <div class="c-reviews-more"><a class="c-reviews-more__link" href="#">ВСЕ ОТЗЫВЫ</a></div>
+        </div>
+      </div>
+    </section>
+    <!--Banner-->
+    <section class="c-banner c-banner--contain" style="background-image: url('img/banner.png')">
+      <div class="g-container">
+        <div class="g-row">
+          <div class="c-banner__content">
+            <h2 class="c-banner__caption">Заполни простую форму и узнай<br>цену своего авто</h2><a class="button" href="#">Заполнить</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Brands-->
+    <section class="c-brands">
+      <div class="g-container">
+        <div class="g-row">
+          <div class="c-brands__content"><img src="img/brands.png" alt="brand"></div>
+        </div>
+      </div>
+    </section>
+    <!--Questions-->
+    <section class="c-questions-wrap">
+      <div class="g-container c-questions-wrap__container">
+        <h2 class="c-questions-caption">Остались вопросы?</h2>
+        <div class="g-row">
+          <div class="c-questions">
+            <div class="c-questions__item"><span class="c-questions__btn">
+                <h2 class="c-questions__title">Но я же могу получить более выгодную цену в Trade-In</h2></span>
+              <div class="c-questions__content">
+                <p class="c-questions__text">Негативные отзывы, как правило, связаны с тем, что клиент не получил ту сумму, на которую рассчитывал. Специфика аукциона заключается в том, что максимальная ставка зависит от состояния автомобиля и его актуальности для дилеров. За 2 года мы помогли продать более 50 000 автомобилей.</p>
+                <p class="c-questions__text">Наша статистика говорит о том, что около 46% всех автомобилей, выставленных на аукцион, успешно продается. Кроме того, Вы можете проходить процедуру аукциона неограниченное количество раз, ведь все услуги компании для Вас абсолютно бесплатны.</p>
+              </div>
+            </div>
+            <div class="c-questions__item"><span class="c-questions__btn">
+                <h2 class="c-questions__title">Но можно же немного подождать и продать дороже</h2></span>
+              <div class="c-questions__content">
+                <p class="c-questions__text">Негативные отзывы, как правило, связаны с тем, что клиент не получил ту сумму, на которую рассчитывал. Специфика аукциона заключается в том, что максимальная ставка зависит от состояния автомобиля и его актуальности для дилеров. За 2 года мы помогли продать более 50 000 автомобилей.</p>
+                <p class="c-questions__text">Наша статистика говорит о том, что около 46% всех автомобилей</p>
+              </div>
+            </div>
+            <div class="c-questions__item"><span class="c-questions__btn">
+                <h2 class="c-questions__title">Я могу продать на вторичном рынке и получить более высокую цену</h2></span>
+              <div class="c-questions__content">
+                <p class="c-questions__text">Негативные отзывы, как правило, связаны с тем, что клиент не получил ту сумму, на которую рассчитывал. Специфика аукциона заключается в том, что максимальная ставка зависит от состояния автомобиля и его актуальности для дилеров. За 2 года мы помогли продать более 50 000 автомобилей.</p>
+                <p class="c-questions__text">Наша статистика говорит о том, что около 46% всех автомобилей</p>
+              </div>
+            </div>
+            <div class="c-questions__item"><span class="c-questions__btn">
+                <h2 class="c-questions__title">Я находил негативные отзывы от тех, кто прошел аукцион</h2></span>
+              <div class="c-questions__content">
+                <p class="c-questions__text">Негативные отзывы, как правило, связаны с тем, что клиент не получил ту сумму, на которую рассчитывал. Специфика аукциона заключается в том, что максимальная ставка зависит от состояния автомобиля и его актуальности для дилеров. За 2 года мы помогли продать более 50 000 автомобилей.</p>
+                <p class="c-questions__text">Наша статистика говорит о том, что около 46% всех автомобилей</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Footer-->
+    <footer class="c-footer">
+      <div class="g-container">
+        <hr class="c-footer__border">
+        <div class="g-row c-footer__row">
+          <div class="c-footer__item c-footer__item--md-9">
+            <ul class="c-footer__list">
+              <li class="c-footer__list-item"><a class="c-footer__link" href="#">Оценка авто</a></li>
+              <li class="c-footer__list-item"><a class="c-footer__link" href="#">Советы</a></li>
+              <li class="c-footer__list-item"><a class="c-footer__link" href="#">Отзывы</a></li>
+              <li class="c-footer__list-item"><a class="c-footer__link" href="#">Вопросы и ответы</a></li>
+            </ul>
+            <p class="c-footer__copyright">© 2014-2017 ООО «Селаникар»,<br>официальный сайт, все права защищены</p>
+          </div>
+          <div class="c-footer__item c-footer__item--md-3"><a class="callback" href="#">ОБРАТНАЯ СВЯЗЬ</a></div>
+        </div>
+      </div>
+    </footer>
+    <!--Scripts-->
+    <!--Modal-->
+    <div class="c-modal__overlay">
+      <div class="c-modal" id="rate">
+        <div class="c-modal__close">
+              <svg class="icon icon-close c-modal__close-icn">
+                <use xlink:href="img/sprite/sprite.svg#close"></use>
+              </svg>
+        </div>
+        <h2 class="c-modal__caption">Оставьте заявку</h2>
+        <h3 class="c-modal__sub-caption">Менеджер перезвонит и ответит на все вопросы</h3>
+        <form class="c-modal__form" action="#" method="post">
+          <input class="main-input main-input--plc-black main-input--modal required" type="text" placeholder="Имя" required>
+          <input class="main-input main-input--plc-black main-input--modal required js-masked" type="text" placeholder="Телефон" required>
+          <textarea class="main-input main-input--plc-black main-input--modal required c-modal__textarea" placeholder="Комментарий о детали" required></textarea>
+          <div class="c-profile__input-item c-modal__item">
+            <div class="main-checkbox">
+              <input class="main-checkbox__check" id="checkbox" type="checkbox" style="display: none">
+              <label class="main-checkbox__label" for="checkbox"><span class="main-checkbox__item main-checkbox__item--icon">
+                  <svg class="main-checkbox__svg" width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg></span><span class="main-checkbox__label-text c-modal__label-text">Отправляя сообщение, я принимаю<a class="main-checkbox__label-link" href="">пользовательское соглашение</a>и подтверждаю, что ознакомлен и согласен с<a class="main-checkbox__label-link" href="#">политикой конфиденциальности</a>данного сайта</span></label>
+            </div>
+          </div>
+          <div class="c-modal__btn">
+            <button class="button send" type="submit">Отправить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="js/scripts.min.js"></script>
+    <!--script(src="js/common.js")-->
+  </body>
+</html>

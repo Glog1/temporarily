@@ -1,0 +1,304 @@
+@import "../includes/vars";
+@import "../includes/mixin";
+
+.c-header {
+  &__top-line{
+    padding: 10px 0;
+  }
+  &__row{
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__logo{
+    @include g-col;
+    line-height: 0;
+  }
+  &__logo-img{
+    width: 100px;
+    @media only screen and (min-width: 480px) {
+      width: 130px;
+    }
+    @media only screen and (min-width: $mobile) {
+      width: 189px;
+    }
+  }
+  &__logo-desc{
+    font: 700 12px/1 $Ub-bd;
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+  &__right{
+    display: flex;
+    align-items: center;
+    @include g-col;
+  }
+
+  &__burger-wrapp{
+    @include g-col;
+    display: flex;
+    flex: 1;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 0;
+    @media screen and (min-width: $tablet){
+      display: none
+    }
+  }
+  &__burger{
+    position: relative;
+    width: 30px;
+    height: 22px;
+    transition-duration: 0.5s;
+    z-index: 100;
+    &:hover{
+      cursor: pointer;
+    }
+    &--icon{
+      transition-duration: 0.5s;
+      position: absolute;
+      height: 2px;
+      width: 30px;
+      top: 50%;
+      background-color: $dark;
+
+      &:before{
+        transition-duration: 0.5s;
+        position: absolute;
+        width: 30px;
+        height: 2px;
+        background-color: $dark;
+        content: "";
+        top: -8px;
+      }
+      &:after{
+        transition-duration: 0.5s;
+        position: absolute;
+        width: 30px;
+        height: 2px;
+        background-color: $dark;
+        content: "";
+        top: 8px;
+      }
+    }
+    &.active{
+      .c-header__burger--icon{
+        transition-duration: 0.5s;
+        background: transparent;
+        &:before{
+          -webkit-transform: rotateZ(45deg) scaleX(1.25) translate(4px, 5px);
+          transform: rotateZ(45deg) scaleX(1.25) translate(4px, 5px);
+          background-color: #fff;
+          @media only screen and (max-width: $tablet-1) {
+            background-color: #ffffff;
+          }
+        }
+        &:after{
+          @media only screen and (max-width: $tablet-1) {
+            background-color: #ffffff;
+          }
+          -webkit-transform: rotateZ(-45deg) scaleX(1.25) translate(5px, -6px);
+          transform: rotateZ(-45deg) scaleX(1.25) translate(5px, -6px);
+          background-color: #fff
+        }
+      }
+    }
+  }
+  &__btn{
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+}
+.c-location{
+  padding: 12px 0;
+  position: relative;
+  @media only screen and (min-width:$mobile) {
+    padding: 12px 20px;
+  }
+  @media only screen and (min-width: 769px) {
+    margin-right: 10px;
+  }
+  @media only screen and (min-width: $tablet) {
+    padding: 12px 35px;
+  }
+  @media only screen and (min-width: $tablet) {
+    min-width: 225px;
+
+  }
+  &.active{
+    background-color: $main;
+    .c-location__arrow-icn{
+      @include rotate(180deg)
+    }
+  }
+  &__select{
+    color: $accent;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    @media only screen and (min-width: $mobile) {
+      font-size: 18px;
+    }
+  }
+  &__name{
+    margin: 0 10px;
+  }
+  &__loc-icn{
+    font-size: 20px;
+    @media only screen and (min-width: $mobile) {
+      font-size: 29px;
+    }
+  }
+  &__arrow-icn{
+    font-size: 10px;
+    color: $accent;
+    margin-top: 6px;
+    @include transition(all, .35s, ease);
+    @media only screen and (min-width: $mobile) {
+      font-size: 12px;
+    }
+  }
+  &__list-wrap{
+    min-width: 225px;
+    background-color: #ffffff;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 2;
+    @include scale(.5);
+    @include transition(all, .35s, ease);
+    @include box-shadow(0, 16px, 46px, 0, rgba(0, 0, 0, 0.23));
+    @include border-radius(2px);
+    @media screen and (min-width: $tablet){
+      left: 0;
+      right: initial;
+    }
+    &.active{
+      opacity: 1;
+      visibility: visible;
+      @include scale(1);
+    }
+  }
+  &__list{
+    padding: 10px;
+    overflow-y: auto;
+    max-height: 310px;
+
+  }
+  &__list-item{
+    margin-bottom: 15px;
+    padding: 0 5px 0 0;
+    @media screen and (min-width: $mobile){
+      font-size: 18px;
+    }
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  &__list-child{
+    padding-left: 10px;
+  }
+  &__list-child-item{
+    color: $text;
+  }
+}
+
+.c-navbar-wrap{
+  background-color: $main;
+  @media only screen and (max-width: $tablet-1) {
+    position: fixed;
+    left: -50%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $accent;
+    opacity: 0;
+    visibility: hidden;
+    @include scale(.5);
+    @include transition(all, .35s, ease);
+    &.active{
+      opacity: 1;
+      visibility: visible;
+      @include scale(1);
+      left: 0;
+    }
+
+  }
+}
+.c-navbar{
+  box-sizing: border-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex: 0 1 auto;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -ms-flex-direction: row;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  &__item{
+    position: relative;
+    font-size: 18px;
+    display: block;
+    @include g-col;
+    padding: 12px 0 14px;
+    opacity: .7;
+    @media only screen and (max-width: $tablet-1) {
+      color: #ffffff;
+      opacity: 1;
+    }
+    &:before{
+      content: '';
+      position: absolute;
+      left: 50%;
+      right: 0;
+      bottom: 0;
+      width: 0;
+      background-color: $accent;
+      height: 3px;
+      @include transition(all, .35s, ease);
+      @media only screen and (max-width: $tablet-1) {
+        background-color: #ffffff;
+      }
+    }
+    &:hover,
+    &:focus,
+    &:active{
+      opacity: 1;
+      color: $dark;
+      @media only screen and (max-width: $tablet-1) {
+        color: #ffffff;
+      }
+      &:before{
+        left: 0;
+        width: 100%;
+      }
+    }
+  }
+  @media only screen and (max-width: $tablet-1) {
+    flex-direction: column;
+
+  }
+}

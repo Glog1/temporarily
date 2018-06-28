@@ -1,0 +1,44 @@
+@import "../includes/vars";
+@import "../includes/mixin";
+.c-banner{
+  background: no-repeat center /cover;
+  padding: 28px 0;
+  &--contain{
+    @media only screen and (min-width: 1200px) {
+      -webkit-background-size: contain;
+      background-size: contain;
+    }
+  }
+  @media only screen and (min-width: 480px) {
+    padding: 50px 0;
+  }
+  @media only screen and (min-width: $mobile) {
+    padding: 70px 0;
+  }
+  @media only screen and (min-width: $tablet) {
+    padding: 90px 0;
+  }
+  &--black{
+    color: #ffffff;
+  }
+  &__content{
+    @include g-col;
+    flex-basis: 90%;
+    max-width: 90%;
+    @media only screen and (min-width: 400px) {
+      flex-basis: 70%;
+      max-width: 70%;
+    }
+  }
+  &__caption{
+    font: 500 14px $Ub-md;
+    margin-bottom: 15px;
+    @media only screen and (min-width: $mobile) {
+      font-size: 20px;
+    }
+    @media only screen and (min-width: $tablet) {
+      font-size: 28px;
+      margin-bottom: 23px;
+    }
+  }
+}

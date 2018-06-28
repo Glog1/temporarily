@@ -1,0 +1,10 @@
+@import "../includes/vars";
+@import "../includes/mixin";
+.c-brands{
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+  &__content{
+    padding: 0 15px;
+  }
+}
