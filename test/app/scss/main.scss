@@ -1,0 +1,319 @@
+@import "vars";
+@import "mixin";
+@import "fonts";
+@import "libs";
+
+::placeholder {
+  color: #666;
+}
+
+::selection {
+  background-color: $accent;
+  color: #fff;
+}
+
+body {
+  font-size: 16px;
+  position: relative;
+  line-height: 1.333;
+  font-family: $default-font;
+  overflow-x: hidden;
+  color: $text;
+  margin: 0;
+}
+
+.g-container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.g-row {
+  box-sizing: border-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex: 0 1 auto;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -ms-flex-direction: row;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+  justify-content: center;
+  @media screen and (min-width: 1050px) {
+    justify-content: space-between;
+  }
+
+}
+
+.main {
+  background-image: url(../img/bg.jpg);
+  min-height: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  padding: 50px 0;
+  &:before, &:after {
+    position: fixed;
+    z-index: -1;
+    display: block;
+    width: 100%;
+    height: 50%;
+    content: '';
+  }
+  &:before {
+    top: 0;
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  }
+  &:after {
+    bottom: 0;
+    background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    background-image: linear-gradient(360deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  }
+}
+
+.title {
+  color: #ffffff;
+  margin: 0 0 20px;
+  font: 400 30px $auxiliary-font;
+  text-align: center;
+  text-shadow: 0 1px 0 #000000;
+  @media screen and (min-width: 576px) {
+    font-size: 36px;
+  }
+}
+
+.card {
+  display: flex;
+  position: relative;
+  width: 280px;
+  max-width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0) 30px, $default 0%);
+  padding: 4px;
+  @include border-radius(10px);
+  @include transition(all, .35s, ease);
+  @media screen and (min-width: 576px) {
+    width: 310px;
+  }
+  &__bg {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0) 28px, $card-bg 0%);
+    @include border-radius(6px);
+  }
+  &__inner {
+    padding: 18px 42px;
+    flex: 1;
+  }
+  &__img {
+    display: block;
+    vertical-align: middle;
+    max-width: 270px;
+    @media screen and (min-width: 768px) {
+      max-width: 100%;
+    }
+  }
+  &__question {
+    display: none;
+    color: $selected;
+  }
+  &__label {
+    font-size: 13px;
+    color: $silver;
+    @media screen and (min-width: 768px) {
+      font-size: 16px;
+    }
+  }
+  &__title {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #000000;
+    margin: 0;
+    @media screen and (min-width: 768px) {
+      font-size: 48px;
+    }
+  }
+  &__descr {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000000;
+    margin-bottom: 16px;
+    @media screen and (min-width: 768px) {
+      font-size: 24px;
+    }
+  }
+  &__specs {
+    color: #666666;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 10px;
+    @media screen and (min-width: 768px) {
+      font-size: 14px;
+    }
+  }
+  &__specs-count {
+    display: block;
+  }
+}
+
+.product {
+  position: relative;
+  display: flex;
+  @include g-col;
+  padding-bottom: 40px;
+  margin-bottom: 30px;
+  flex-basis: 100%;
+  max-width: 100%;
+  @media screen and (min-width: 576px) {
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+  @media screen and (min-width: 1050px) {
+    flex-basis: 33.333%;
+    max-width: 33.333%;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+  @media screen and (min-width: 1050px) {
+    margin-bottom: 0;
+  }
+  &.js-selected {
+    .card {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0) 30px, $selected 0%);
+    }
+    .weight {
+      background-color: $selected;
+    }
+    .product__info {
+      display: block;
+    }
+    .product__buy,
+    .product__link {
+      display: none;
+    }
+  }
+  &.js-disabled {
+    .card {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0) 30px, $disabled 0%);
+      &__title,
+      &__label,
+      &__descr,
+      &__specs {
+        color: #666;
+      }
+      &__inner,
+      &__img {
+        opacity: .5;
+      }
+    }
+    .product__unavailable {
+      display: block;
+    }
+    .product__buy,
+    .product__link,
+    .product__info {
+      display: none;
+    }
+    .weight {
+      background-color: $disabled;
+    }
+  }
+  &.js-hovered {
+    .card {
+      &__question {
+        display: block;
+      }
+      &__label {
+        display: none;
+      }
+    }
+  }
+  &__buy,
+  &__info,
+  &__unavailable,
+  &__link {
+    font-size: 13px;
+    font-weight: 400;
+    color: #ffffff;
+    text-shadow: 0 1px 0 #000000;
+    text-align: center;
+  }
+  &__info {
+    display: none;
+  }
+  &__unavailable {
+    color: $yellow;
+    display: none;
+  }
+  &__link {
+    font-weight: 700;
+    text-decoration: none;
+    color: #1698d9;
+    border-bottom: 1px dashed #1698d9;
+
+  }
+  &__bottom {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    padding: 0 15px;
+    @media screen and (min-width: 768px) {
+      bottom: 0;
+    }
+  }
+}
+
+.link {
+  cursor: pointer;
+}
+
+.weight {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  width: 83px;
+  height: 83px;
+  @include border-radius(50%);
+  background-color: $default;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #ffffff;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 1;
+  &__measure {
+    font-size: 18px;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 42px;
+    &__measure {
+      font-size: 21px;
+    }
+  }
+}
+
