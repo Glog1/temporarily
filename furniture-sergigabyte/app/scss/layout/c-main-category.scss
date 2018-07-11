@@ -1,0 +1,168 @@
+@import "../includes/vars";
+@import "../includes/mixin";
+
+.c-main-categories {
+  margin-bottom: 50px;
+  &__column {
+    display: flex;
+    //flex-direction: row;
+    flex-direction: column;
+    @media only screen and (max-width: $tablet-1) {
+      margin-bottom: 30px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+    }
+    @media (min-width: 769px) and (max-width: $tablet-1) {
+      flex-direction: row;
+    }
+    @media only screen and (min-width: $tablet) {
+      flex-direction: column;
+    }
+
+  }
+  &__col-sm-5 {
+    @media (min-width: $mobile) and (max-width: 768px) {
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 41.66667%;
+      -ms-flex: 0 0 41.66667%;
+      flex: 0 0 41.66667%;
+      max-width: 41.66667%;
+    }
+  }
+  &__col-sm-6 {
+    @media (min-width: $mobile) and (max-width: 768px) {
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 50%;
+      -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+  &__col-sm-7 {
+    @media (min-width: $mobile) and (max-width: 768px) {
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 58.33333%;
+      -ms-flex: 0 0 58.33333%;
+      flex: 0 0 58.33333%;
+      max-width: 58.33333%;
+    }
+  }
+  &__col {
+    &--mb {
+      margin-bottom: 30px;
+    }
+    &--md {
+      @media (min-width: 769px) and (max-width: $tablet-1) {
+        flex-basis: 70%;
+        max-width: 70%;
+        padding: 0 15px;
+        margin-bottom: 0;
+      }
+      @media only screen and (min-width: $tablet) {
+        flex: 1;
+      }
+    }
+    &--sm {
+      @media (min-width: 769px) and (max-width: $tablet-1) {
+        flex-basis: 30%;
+        max-width: 30%;
+        margin: 0;
+      }
+    }
+  }
+  &__mob-mt {
+    @media screen and (max-width: $mobile-1) {
+      margin-top: 30px;
+    }
+    @media (min-width: 769px) and (max-width: $tablet-1) {
+      margin-top: 30px;
+    }
+  }
+  &__item {
+    background-color: $main;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    &:hover {
+      .c-main-categories__img {
+        @include scale(1.05);
+      }
+    }
+    &--md .c-main-categories__content {
+      width: auto;
+      @media only screen and (max-width: 768px) {
+        width: 100%;
+      }
+    }
+    &--sm .c-main-categories__content {
+      width: 100%;
+    }
+  }
+  &__img {
+    @include transition(all, .35s, ease);
+    height: 100%;
+    width: 100%;
+  }
+  &__content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .62);
+    padding: 10px 18px 12px;
+    width: 100%;
+  }
+  &__title,
+  &__desc {
+    color: #ffffff;
+  }
+  &__title {
+    font: 700 16px $Op-bd;
+
+    @media only screen and (min-width: $tablet) {
+      font-size: 22px;
+    }
+    @media only screen and (min-width: $desctop) {
+      font-size: 24px;
+    }
+    @media only screen and (min-width: $desctop_lg) {
+      font-size: 30px;
+    }
+    &--sm {
+      @media only screen and (min-width: $tablet) {
+        font-size: 14px;
+      }
+      @media only screen and (min-width: $desctop) {
+        font-size: 17px;
+      }
+      @media only screen and (min-width: $desctop_lg) {
+        font-size: 22px;
+      }
+    }
+  }
+  &__desc {
+    font: 300 12px/1.2 $Op-lh;
+    margin-top: 10px;
+    @media only screen and (max-width: 480px) {
+      display: none;
+    }
+    @media only screen and (min-width: $tablet) {
+      font-size: 12px;
+    }
+    @media only screen and (min-width: $desctop) {
+      font-size: 13px;
+    }
+    @media only screen and (min-width: $desctop_lg) {
+      font-size: 16px;
+      margin-top: 15px;
+    }
+  }
+  &__list {
+    padding-left: 15px;
+  }
+  &__point {
+    list-style-type: disc;
+  }
+}

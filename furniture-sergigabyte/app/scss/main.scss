@@ -1,0 +1,193 @@
+@import "includes/vars";
+@import "includes/fonts";
+@import "includes/libs";
+@import "includes/sprite";
+@import "includes/mixin";
+//@import "includes/button";
+
+::placeholder {
+  color: #929292;
+  font-family: $default-font;
+}
+
+::selection {
+  background-color: $accent;
+  color: #fff;
+}
+html, body{
+  //min-height: 100%;
+  //height: 100%;
+}
+body {
+  font-size: 16px;
+  position: relative;
+  line-height: 1.3333;
+  font-family: $default-font;
+  color: $dark;
+  margin: 0;
+  background-color: #fff;
+  * {
+    outline: none;
+    box-sizing: border-box;
+    &:hover,
+    &:focus {
+      outline: none;
+    }
+  }
+  &.hidden{
+    overflow: hidden;
+  }
+}
+
+img {
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+input, textarea {
+  border: #666 1px solid;
+  outline: none;
+  &:focus:required:invalid {
+    border-color: red;
+  }
+  &:required:valid {
+    border-color: green;
+  }
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: $dark;
+  @include transition(all, .35s, ease);
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: $hover;
+  }
+}
+ul,li{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+p{
+  color: $text;
+}
+.container {
+  max-width: 100%;
+  @media only screen and (min-width: $tablet) {
+    max-width: 85%;
+  }
+}
+.wrap{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.content{
+  flex: 1 0 auto;
+}
+.c-footer{
+  flex: 0 0 auto;
+}
+.main-input {
+  background-color: #fff;
+  padding: 19px 25px 17px;
+  border: 1px solid #fafafa;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  display: block;
+  width: 100%;
+  margin-bottom: 23px;
+  @include transition(all, .35s, ease)
+}
+.bg-dark{
+  background-color: $dark-2;
+  p{
+    color: #ffffff;
+  }
+  .c-footer{
+    a{
+      color: #ffffff;
+    }
+  }
+}
+
+//HEADER
+@import "layout/c-header";
+//Home slider
+@import "layout/c-home-slider";
+//Category
+@import "layout/c-main-category";
+//Catalog
+@import "layout/c-catalog";
+//Cart slider
+@import "layout/c-card-slider";
+
+//Footer
+@import "layout/c-footer";
+
+.read-more{
+  font-family: $Op-lh;
+  font-size: 16px;
+  color: #ffffff;
+
+  @media only screen and (min-width: $mobile) {
+    font-size: 18px
+  }
+  @media only screen and (min-width: $tablet) {
+    font-size: 20px
+  }
+  &__icon-wrap{
+    background-color: $accent;
+    @include border-radius(50%);
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    display: inline-flex;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+    @include transition(all, .35s, ease);
+    @media only screen and (min-width: $mobile) {
+      margin-right: 10px;
+      width: 30px;
+      height: 30px;
+    }
+    &--small{
+      width: 22px;
+      height: 22px;
+    }
+  }
+  &__icon{
+    color: #ffffff;
+    font-size: 12px;
+    @include transition(all, .35s, ease);
+    @media only screen and (min-width: $mobile) {
+      font-size: 15px;
+    }
+    &--small{
+      font-size: 10px;
+    }
+  }
+  &:hover,
+  &:focus{
+    color: $main;
+    .read-more__icon-wrap{
+      background-color: $main;
+
+    }
+  }
+  &--small{
+    font-size: 16px;
+  }
+}
+

@@ -1,0 +1,54 @@
+@import "../includes/vars";
+@import "../includes/mixin";
+.c-footer{
+  &__content{
+    padding: 20px 0;
+    @media only screen and (max-width: $mobile-1) {
+      text-align: center;
+    }
+  }
+  &__border{
+    border-top: px solid $dark;
+  }
+  &__item{
+    @media only screen and (max-width: $mobile-1) {
+      margin-bottom: 20px;
+    }
+  }
+  &__address{
+    font-style: normal;
+  }
+}
+.social{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20px;
+  @media only screen and (min-width: $tablet) {
+    justify-content: flex-end;
+  }
+
+  &__item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: $silver;
+    @include border-radius(50%);
+    @include transition(all, .35s, ease);
+    margin-right: 10px;
+    &:last-child{
+      margin-right: 0;
+    }
+    &:hover{
+      background-color: $main;
+    }
+  }
+  &__icon{
+    color: #ffffff;
+    font-size: 22px;
+    @include transition(all, .35s, ease);
+  }
+
+}

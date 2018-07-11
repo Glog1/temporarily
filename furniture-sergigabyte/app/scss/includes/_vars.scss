@@ -1,0 +1,34 @@
+//Fonts
+$default-font: "OpenSansRegular", sans-serif;
+$Op-bd: "OpenSansBold", sans-serif;
+$Op-lh: "OpenSansLight", sans-serif;
+
+//Color
+$accent: #6dabff;
+$hover: #1e2568;
+$main: #1e2568;
+$silver: #cccccc;
+$dark: #000000;
+$text: #000000;
+$dark-2: #4d4d4d;
+
+
+//Media queries
+$mobile-1: 575px;
+$mobile: 576px;
+$tablet-1: 1024px;
+$tablet: 1025px;
+$tablet_lg: 1200px;
+$desctop_sm: 1301px;
+$desctop: 1367px;
+$desctop_md: 1451px;
+$desctop_lg: 1650px;
+$large: 1920px;
+
+// Customization Bootstrap vars from "app/libs/bootstrap/scss/_variables.scss"
+$grid-gutter-width: 30px;
+$grid-columns: 12;
+$grid-breakpoints: (xs: 0, sm: 576px, md: 1025px, lg: 1200px, xl: 1366px);
+//$container-max-widths: (sm: 768px, md: 960px, lg: 1140px, xl: 1200px);
+
+$gutter: $grid-gutter-width;

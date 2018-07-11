@@ -1,0 +1,22 @@
+.c-card {
+  padding: 80px 0; }
+
+.c-carousel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  max-width: 100%; }
+  .c-carousel__main {
+    max-width: 70%;
+    -ms-flex-preferred-size: 70%;
+    flex-basis: 70%;
+    padding: 0 15px; }
+  .c-carousel__nav {
+    max-width: 30%;
+    -ms-flex-preferred-size: 30%;
+    flex-basis: 30%;
+    padding: 0 15px; }
