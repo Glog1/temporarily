@@ -1,0 +1,99 @@
+@import "../includes/vars";
+@import "../includes/mixin";
+
+.c-about-header{
+  padding: 45px 0;
+  background: #0d95e8 no-repeat center / cover;
+  position: relative;
+  min-height: 310px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @media only screen and (min-width: $mobile_sm) {
+    min-height: 380px;
+  }
+  @media only screen and (min-width: $tablet_xs) {
+    min-height: 390px;
+  }
+  @media only screen and (min-width: $tablet) {
+    min-height: 400px;
+  }
+  @media only screen and (min-width: $desctop) {
+    min-height: 465px;
+  }
+  &__container{
+    display: flex;
+    flex: 1;
+    @media (min-width: $tablet_xs) and (max-width: $tablet-1) {
+      max-width: 830px;
+    }
+    @media only screen and (max-width: $tablet_xs-1) {
+      max-width: 405px;
+    }
+  }
+  &__content{
+    @include g-col;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+  &__list{
+    padding-left: 31px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @media only screen and (min-width: $tablet) {
+      padding-left: 50px;
+      justify-content: space-evenly;
+    }
+    @media only screen and (min-width: $desctop_lg) {
+      padding-left: 31px;
+    }
+
+  }
+  &__list-item{
+    font: 23px $bold-font;
+    color: #ffffff;
+    position: relative;
+    margin: 12px 0;
+    &:before{
+      content: '';
+      width: 14px;
+      height: 14px;
+      position: absolute;
+      top: 10px;
+      left: -30px;
+      @include border-radius(50%);
+      @include border(5px, solid, #fff)
+    }
+    @media only screen and (min-width: $mobile_sm) {
+      font-size: 25px;
+      margin: 18px 0;
+    }
+    @media only screen and (min-width: $tablet_xs) {
+      font-size: 24px;
+      margin: 15px 0;
+      &:before{
+        top: 8px;
+
+      }
+    }
+    @media only screen and (min-width: $tablet) {
+      font-size: 30px;
+      margin: 5px 0;
+      &:before{
+        top: 12px;
+        left: -50px;
+        width: 16px;
+        height: 16px;
+        border-width: 6px;
+      }
+    }
+    @media only screen and (min-width: $desctop) {
+      font-size: 36px;
+      &:before{
+        top: 17px;
+      }
+    }
+  }
+}

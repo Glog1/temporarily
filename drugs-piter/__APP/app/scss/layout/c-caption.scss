@@ -1,0 +1,83 @@
+@import "../includes/vars";
+@import "../includes/mixin";
+
+.c-caption{
+  padding: 30px 0 0;
+  background: $light no-repeat center / cover;
+  background-position: 40% 0;
+  position: relative;
+  z-index: 1;
+  @media only screen and (max-width: $tablet-xs-1) {
+    background-image: none !important;
+  }
+  @media only screen and (min-width: $tablet_xs) {
+    padding: 40px 0;
+    @include box-shadow(0, 10px, 20px, -10px, rgba(0,0,0,.3))
+  }
+  @media only screen and (min-width: $tablet) {
+    background-position: center;
+  }
+  &__wrap{
+    @include g-col;
+    flex-basis: 100%;
+    max-width: 100%;
+    @media only screen and (min-width: $tablet_xs) {
+      margin-left: 25%;
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 66.66667%;
+      -ms-flex: 0 0 66.66667%;
+      flex: 0 0 66.66667%;
+      max-width: 66.66667%;
+    }
+    @media only screen and (min-width: $tablet) {
+      margin-left: 33.33333%;
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 66.66667%;
+      -ms-flex: 0 0 66.66667%;
+      flex: 0 0 66.66667%;
+      max-width: 66.66667%;
+    }
+    @media only screen and (min-width: $desctop) {
+      margin-left: 33.33333%;
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 58.33333%;
+      -ms-flex: 0 0 58.33333%;
+      flex: 0 0 58.33333%;
+      max-width: 58.33333%
+    }
+  }
+  &__title{
+    font: 700 22px/1.2 $bold-font;
+    text-align: center;
+    @media only screen and (min-width: $mobile-1) {
+      font-size: 25px;
+    }
+    @media only screen and (min-width: $tablet_xs) {
+      text-align: left;
+      font-size: 25px;
+
+    }
+    @media only screen and (min-width: $tablet_sm) {
+      font-size: 32px;
+
+    }
+    @media only screen and (min-width: $tablet) {
+      font-size: 34px;
+
+    }
+    @media only screen and (min-width: $tablet_lg) {
+      font-size: 38px;
+    }
+    @media only screen and (min-width: $desctop) {
+      font-size: 40px;
+    }
+  }
+  &__accent{
+    color: $additional;
+    margin: 0 5px;
+  }
+}
+
+
+
+

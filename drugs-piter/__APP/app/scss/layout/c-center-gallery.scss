@@ -1,0 +1,60 @@
+@import "../includes/vars";
+@import "../includes/mixin";
+
+.c-center-gallery-wrap{
+  padding: 45px 0;
+}
+.c-center-gallery{
+  margin: -1px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0 15px;
+  @media only screen and (max-width: $mobile-1) {
+    max-width: 515px;
+    margin: 0 auto;
+  }
+  &__item-img{
+    @include transition(all, .4s, ease);
+    @include border-radius(10px);
+    margin: 0 auto;
+  }
+  &__item{
+    display: block;
+    @include g-col;
+    @include border-radius(10px);
+    padding: 1px;
+    overflow: hidden;
+    @media only screen and (min-width: $mobile) {
+      max-width: 50%;
+      flex-basis: 50%;
+    }
+    @media only screen and (min-width: $tablet_xs) {
+      max-width: 25%;
+      flex-basis: 25%;
+    }
+    &:hover{
+      .c-center-gallery__item-img{
+        @include scale(1.05);
+      }
+    }
+
+  }
+  .slick-prev:before,
+  .slick-next:before{
+    width: 44px;
+    height: 43px;
+    -webkit-background-size: 12px;
+    background-size: 12px;
+  }
+  .slick-prev{
+    @media only screen and (max-width: $mobile-1) {
+      left: 25px;
+    }
+  }
+  .slick-next{
+    @media only screen and (max-width: $mobile-1) {
+      right: 25px;
+    }
+  }
+}

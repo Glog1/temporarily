@@ -1,0 +1,110 @@
+@import "../includes/vars";
+@import "../includes/mixin";
+
+.c-offer{
+  padding: 40px 0;
+  background: $light no-repeat center / cover;
+  position: relative;
+  color: #ffffff;
+  @media only screen and (max-width: $tablet_xs-1) {
+    text-align: center;
+  }
+  @media only screen and (min-width: $tablet-xs) {
+    padding: 50px 0;
+
+  }
+  @media only screen and (min-width: $desctop) {
+    padding: 52px 0;
+
+  }
+  &__item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    @media only screen and (min-width: $tablet-xs) {
+      align-items: start;
+    }
+    &--center{
+      align-items: center;
+    }
+    &--start{
+      @media only screen and (min-width: $mobile_sm) {
+        align-items: start;
+        text-align: left;
+      }
+    }
+  }
+  &__wrap-inside{
+    max-width: 880px;
+    margin: 0 auto;
+  }
+  &__desc{
+    font: 700 22px $bold-font;
+    display: block;
+    margin-bottom: 12px;
+    @media only screen and (min-width: $desctop) {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  }
+  &__numb{
+    font: 400 30px $monstr;
+    display: block;
+    margin-bottom: 12px;
+    color: #ffffff;
+    @media only screen and (min-width: $mobile_sm) {
+      font-size: 40px;
+    }
+    @media only screen and (min-width: $desctop) {
+      font-size: 45px;
+      margin-bottom: 20px;
+    }
+  }
+  &__anon{
+    font: 700 18px $bold-font;
+    display: block;
+    color: #ccf0ff;
+    @media only screen and (min-width: $desctop) {
+      font-size: 20px;
+    }
+  }
+  &__caption{
+    font: 700 26px/1.2 $bold-font;
+    color: #ffffff;
+    &--mb{
+      margin-bottom: 25px;
+    }
+    @media only screen and (min-width: $mobile_sm) {
+      font-size: 34px;
+    }
+    @media only screen and (min-width: $desctop) {
+      font-size: 37px;
+      &--mb{
+        margin-bottom: 43px;
+      }
+    }
+    &--sm{
+      font-size: 24px;
+      @media only screen and (min-width: $tablet_xs) {
+        font-size: 33px;
+      }
+      @media only screen and (min-width: $desctop) {
+        font-size: 37px;
+      }
+    }
+  }
+  &__icon{
+    font-size: 94px;
+    @media only screen and (max-width: $mobile_sm-1) {
+      margin-bottom: 30px;
+    }
+    @media only screen and (min-width: $desctop) {
+      font-size: 104px;
+    }
+  }
+}
+
+
+
+

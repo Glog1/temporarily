@@ -1,0 +1,34 @@
+section(style="background-image: url('img/bg.jpg')").c-new-way
+    .custom-container__md
+        .row
+            .col-md-6
+                h2.c-new-way__caption Начните путь
+                    span.c-new-way__caption-span к новой жизни
+            .col-md-6
+                form.form.c-new-way__form
+                    span.c-new-way__anon Звонок анонимный
+                    .form-inside-wrap
+                        input(type="text" required placeholder="+7 (951) 743-89-89").form__input.main-input.main-input--custom.js-masked.required
+                        button(type="submit").button.button--orange.send Позвоните мне
+                        .main-checkbox.form__chekbox
+                            label.main-checkbox__label
+                                input.main-checkbox__check(type='checkbox', style='display: none')
+                                span.main-checkbox__item.main-checkbox__item--icon
+                                    //svg(width='12px', height='10px', viewbox='0 0 12 10').main-checkbox__svg
+                                    //    polyline(points='1.5 6 4.5 9 10.5 1')
+                                    +icon('chek','main-checkbox__svg')
+                                span.main-checkbox__label-text.c-modal__label-text Отправляя сообщение, я принимаю
+                                    a(href="").main-checkbox__label-link пользовательское соглашение
+                                    | и подтверждаю, что ознакомлен и согласен с
+                                    a(href="#").main-checkbox__label-link политикой конфиденциальности
+                                    | данного сайта
+
+
+
+
+
+
+
+
+
+

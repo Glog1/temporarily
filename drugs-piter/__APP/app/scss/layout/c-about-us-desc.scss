@@ -1,0 +1,14 @@
+@import "../includes/vars";
+@import "../includes/mixin";
+
+.c-about-desc{
+  padding: 60px 0;
+  &__text{
+    @media only screen and (min-width: $mobile_sm) {
+      font-size: 21px;
+    }
+    @media only screen and (min-width: $tablet_xs) {
+      font-size: 22px;
+    }
+  }
+}

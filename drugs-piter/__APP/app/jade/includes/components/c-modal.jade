@@ -1,0 +1,83 @@
+.c-modal.c-modal--xs#callback
+    .c-modal__content
+        form.c-modal__form.c-form
+            label.c-form__label Ваш телефон:
+                input(type="text" required placeholder="+7 (951) 743-89-89").c-form__input.js-masked.required
+            .main-checkbox.form__chekbox
+                label.main-checkbox__label
+                    input.main-checkbox__check(type='checkbox', style='display: none')
+                    span.main-checkbox__item.main-checkbox__item--icon
+                        +icon('chek','main-checkbox__svg')
+                    span.main-checkbox__label-text.c-form__chek-label-text Отправляя сообщение, я принимаю <a href="" class="main-checkbox__label-link">пользовательское соглашение</a> и подтверждаю, что ознакомлен и согласен с <a href="" class="main-checkbox__label-link"> политикой конфиденциальности</a> данного сайта
+            .c-form__btn-wrap
+                button(type="submit").button.button--orange.send Оставить заявку
+.c-modal.c-modal--cost#cost
+    .custom-container__md
+        form.c-form.c-form--cost
+            .container-fluid
+                .row.c-form__row
+                    .col-md-4.col-sm-4
+                        .c-filter__wrapp
+                            span.c-filter__label Проблема:
+                            .c-filter(data-main="a")
+                                .c-filter__caption-wrap
+                                    span.c-filter__caption Выберите
+                                    +icon('arrow-down','c-filter__icon')
+                                .c-filter__dropdown(data-child="a")
+                                    a.c-filter__item(href='#') Проблема
+                                    a.c-filter__item(href='#') Пробовали лечить?
+                                    a.c-filter__item(href='#') Желаемый результат?
+                    .col-md-4.col-sm-4
+                        .c-filter__wrapp
+                            span.c-filter__label Пробовали лечить?
+                            .c-filter(data-main="b")
+                                .c-filter__caption-wrap
+                                    span.c-filter__caption Выберите
+                                    +icon('arrow-down','c-filter__icon')
+                                .c-filter__dropdown(data-child="b")
+                                    a.c-filter__item(href='#') Проблема
+                                    a.c-filter__item(href='#') Пробовали лечить?
+                                    a.c-filter__item(href='#') Желаемый результат?
+                    .col-md-4.col-sm-4
+                        .c-filter__wrapp
+                            span.c-filter__label Желаемый результат?
+                            .c-filter(data-main="c")
+                                .c-filter__caption-wrap
+                                    span.c-filter__caption Выберите
+                                    +icon('arrow-down','c-filter__icon')
+                                .c-filter__dropdown(data-child="c")
+                                    a.c-filter__item(href='#') Проблема
+                                    a.c-filter__item(href='#') Пробовали лечить?
+                                    a.c-filter__item(href='#') Желаемый результат?
+                .row.c-form__row
+                    .col-md-4.col-sm-4
+                        .c-filter__wrapp
+                            span.c-filter__label Кем вам приходится зависимый?
+                            .c-filter(data-main="d")
+                                .c-filter__caption-wrap
+                                    span.c-filter__caption Выберите
+                                    +icon('arrow-down','c-filter__icon')
+                                .c-filter__dropdown(data-child="d")
+                                    a.c-filter__item(href='#') Проблема
+                                    a.c-filter__item(href='#') Пробовали лечить?
+                                    a.c-filter__item(href='#') Желаемый результат?
+                    .col-md-4.col-sm-4
+                        .c-form__label-wrap
+                            label.c-form__label Ваше имя:
+                                input(type="text" required placeholder="Иван").c-form__input.required
+                    .col-md-4.col-sm-4
+                        .c-form__label-wrap
+                            label.c-form__label Ваш телефон:
+                                input(type="text" required placeholder="+7 (951) 743-89-89").c-form__input.js-masked.required
+
+                .c-form__chekbox-wrap
+                    .main-checkbox.form__chekbox
+                        label.main-checkbox__label
+                            input.main-checkbox__check(type='checkbox', style='display: none')
+                            span.main-checkbox__item.main-checkbox__item--icon
+                                +icon('chek','main-checkbox__svg')
+                            span.main-checkbox__label-text.c-form__chek-label-text Отправляя сообщение, я принимаю <a href="" class="main-checkbox__label-link">пользовательское соглашение</a> и подтверждаю, что ознакомлен и согласен с <a href="" class="main-checkbox__label-link"> политикой конфиденциальности</a> данного сайта
+                    .c-form__btn-wrap
+                        button(type="submit").button.button--orange.send Узнать стоимость
+
+

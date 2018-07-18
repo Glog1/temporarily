@@ -1,0 +1,73 @@
+@import "../includes/vars";
+@import "../includes/mixin";
+
+.c-home {
+  background: $additional no-repeat center/ cover;
+  background-position: 70% 0;
+  min-height: 30%;
+  min-height: 30vh;
+  padding: 50px 0;
+  display: flex;
+  align-items: center;
+  @media only screen and (min-width: $tablet_xs) {
+    padding: 80px 0;
+    min-height: 37%;
+    min-height: 37vh;
+  }
+  &__content {
+    @include g-col;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+  &__slider {
+    @media only screen and (min-width: $tablet_xs) {
+      padding: 0 15px 0 85px;
+      max-width: 610px;
+    }
+    @media only screen and (min-width: $tablet) {
+      padding: 0 15px 0 115px;
+      max-width: 100%;
+    }
+  }
+  &__slider-item {
+    padding: 10px;
+  }
+  &__caption {
+    font: 700 34px $bold-font;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #ffffff;
+    @media only screen and (min-width: $tablet_xs) {
+      font-size: 38px;
+
+    }
+    @media only screen and (min-width: $tablet) {
+      font-size: 45px;
+      margin-bottom: 15px;
+
+    }
+  }
+  &__desc {
+    font-size: 16px;
+    margin-bottom: 25px;
+    color: #ffffff;
+    @media only screen and (min-width: $tablet_xs) {
+      font-size: 18px;
+      margin-bottom: 34px;
+    }
+    @media only screen and (min-width: $tablet) {
+      font-size: 21px;
+      margin-bottom: 40px;
+    }
+    @media only screen and (min-width: $desctop) {
+      font-size: 22px;
+      margin-bottom: 43px;
+    }
+  }
+  .slick-prev,
+  .slick-next {
+    @media only screen and (max-width: $tablet_xs-1) {
+      display: none !important;
+    }
+  }
+}

@@ -1,0 +1,404 @@
+@import "../includes/vars";
+@import "../includes/mixin";
+.c-footer{
+  color: #ffffff;
+  &__item{
+
+  }
+  &__map-wrap{
+    padding: 0;
+  }
+  &__map{
+    height: 100%;
+    min-height: 353px;
+    @media only screen and (min-width: $tablet_xs) {
+      min-height: 344px;
+    }
+  }
+  &__content-wrap{
+    background-image: linear-gradient(-21deg, #006cbf 0%, #00c9c2 100%);
+    @media (max-width: $tablet_xs) and (min-width: $mobile_sm) {
+      padding: 0 40px;
+    }
+  }
+  &__content{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 34px 0 34px;
+    @media only screen and (min-width: $tablet_xs) {
+      padding: 52px 8px 40px;
+    }
+    @media (max-width: $tablet-1) and (min-width: $tablet_xs) {
+      max-width: 660px;
+      margin: 0 auto;
+      justify-content: space-between;
+    }
+    @media only screen and (min-width: $desctop) {
+      padding: 39px 0 40px 25px;
+    }
+    @media only screen and (min-width: $desctop_lg) {
+      padding: 45px 25px;
+    }
+    @media only screen and (min-width: 1840px) {
+      padding: 54px 36px;
+    }
+  }
+  &__conten-item{
+    @include g-col;
+    flex-basis: 100%;
+    max-width: 100%;
+    @media only screen and (max-width: $tablet_xs-1) {
+      padding: 0;
+    }
+    @media (max-width: $tablet_lg-1) and (min-width: $tablet) {
+      &--left{
+        margin-bottom: 40px;
+      }
+    }
+    @media only screen and (max-width: $tablet_xs-1) {
+      &--left{
+        margin-bottom: 43px;
+      }
+    }
+    @media (max-width: $tablet-1) and (min-width: $tablet_xs) {
+      &--left{
+        flex-basis: 60%;
+        max-width: 60%;
+      }
+      &--right{
+        flex-basis: 40%;
+        max-width: 40%;
+      }
+    }
+    @media only screen and (min-width: $tablet_lg) {
+      flex-basis: 50%;
+      max-width: 50%;
+      &--left{
+        padding-left: 0;
+        padding-right: 0;
+      }
+      &--right {
+        padding-left: 30px;
+      }
+    }
+    @media only screen and (min-width: $desctop_lg) {
+
+      &--left{
+        padding-left: 15px;
+      }
+    }
+    @media only screen and (min-width: 1840px) {
+      &--right {
+        padding-left: 48px;
+      }
+    }
+  }
+  &__caption{
+    font: 17px $bold-font;
+    margin-bottom: 16px;
+    color: #ffffff;
+    @media only screen and (min-width: $mobile_sm) {
+      font-size: 20px;
+    }
+    @media only screen and (min-width: $tablet_xs) {
+      font-size: 19px;
+    }
+    &--mb {
+      @media only screen and (max-width: $tablet-1) {
+        font-size: 14px;
+        margin-bottom: 8px;
+      }
+      @media only screen and (max-width: $tablet_xs-1) {
+        font-size: 16px;
+        margin-bottom: 4px;
+      }
+    }
+    @media only screen and (min-width: $tablet_lg) {
+      font-size: 16px;
+      &--mb{
+        margin-bottom: 30px;
+      }
+    }
+    @media only screen and (min-width: 1300px) {
+      font-size: 18px;
+    }
+    @media only screen and (min-width: $desctop_lg) {
+      font-size: 20px;
+    }
+    @media only screen and (min-width: 1840px) {
+      font-size: 22px;
+    }
+  }
+  &__phone-wrap{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 36px;
+    @media only screen and (min-width: $mobile_sm) {
+      margin-bottom: 46px;
+    }
+    @media only screen and (min-width: $tablet-xs) {
+      margin-bottom: 40px;
+    }
+    @media only screen and (min-width: $tablet) {
+      margin-bottom: 30px;
+    }
+    @media only screen and (min-width: $desctop) {
+      margin-bottom: 56px;
+    }
+  }
+  &__phone-icon{
+    font-size: 50px;
+    margin-right: 12px;
+    @media only screen and (min-width: $mobile_sm) {
+      font-size: 74px;
+    }
+    @media only screen and (min-width: $tablet_xs) {
+      font-size: 69px;
+    }
+    @media only screen and (min-width: $tablet_lg) {
+      font-size: 64px;
+      margin-right: 32px;
+    }
+    @media only screen and (min-width: 1300px) {
+      margin-right: 35px;
+    }
+    @media only screen and (min-width: $desctop_lg) {
+      font-size: 75px;
+    }
+    @media only screen and (min-width: 1840px) {
+      margin-right: 35px;
+      font-size: 89px;
+    }
+  }
+  &__phone{
+    font: 700 22px/1 $bold-font;
+    color: #ffffff;
+    display: block;
+    margin-bottom: 8px;
+    @media only screen and (min-width: $mobile_sm) {
+      font-size: 29px;
+      margin-bottom: 15px;
+    }
+    @media only screen and (min-width: $tablet_xs) {
+      font-size: 27px;
+    }
+    @media only screen and (min-width: $tablet_lg) {
+      font-size: 21px;
+      margin-bottom: 17px;
+    }
+    @media only screen and (min-width: 1300px) {
+      font-size: 25px;
+    }
+    @media only screen and (min-width: 1840px) {
+      font-size: 31px;
+    }
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  &__mail{
+    display: inline-block;
+    font: 700 16px $bold-font;
+    color: #ffffff;
+    position: relative;
+    margin-bottom: 8px;
+    &:before{
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 2px;
+      width: 100%;
+      background-color: $additional;
+    }
+    @media only screen and (min-width: $mobile_sm){
+      font-size: 19px;
+      margin-bottom: 5px;
+    }
+    @media only screen and (min-width: $tablet_xs) {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    @media only screen and (min-width: $tablet_lg) {
+      font-size: 17px;
+    }
+    @media only screen and (min-width: $desctop_lg) {
+      font-size: 20px;
+    }
+    @media only screen and (min-width: 1840px) {
+      font-size: 22px;
+    }
+  }
+  &__address{
+    font-style: normal;
+    font-size: 18px;
+    margin-bottom: 35px;
+    @media only screen and (min-width: $mobile_sm){
+      font-size: 20px;
+    }
+    @media only screen and (min-width: $tablet_xs) {
+      font-size: 18px;
+    }
+    @media only screen and (min-width: $tablet) {
+
+      margin-bottom: 45px;
+    }
+    @media only screen and (min-width: $desctop_lg) {
+      font-size: 22px;
+    }
+  }
+  &__address-title{
+    font: 700 18px $bold-font;
+    margin-right: 10px;
+    @media only screen and (min-width: $tablet) {
+      font-size: 18px;
+    }
+    @media only screen and (min-width: $desctop_lg) {
+      font-size: 22px;
+    }
+  }
+  &__info{
+    color: #ffffff;
+    font-size: 16px;
+    margin-bottom: 6px;
+    line-height: 1.2;
+    @media only screen and (min-width: $tablet-xs) {
+      font-size: 14px;
+      margin-bottom: 9px;
+    }
+    @media only screen and (min-width: $tablet) {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+    @media only screen and (min-width: $desctop_lg) {
+      font-size: 18px;
+      margin-bottom: 7px;
+    }
+  }
+  &__copyright{
+    font-size: 12px;
+    line-height: 1.4;
+    color: #ffffff;
+    margin: 26px 0 28px;
+    @media only screen and (min-width: $tablet_xs) {
+      margin: 37px auto 28px;
+      text-align: center;
+    }
+    //@media only screen and (min-width: $tablet-1) {
+    //  text-align: left;
+    //  margin-left: 0;
+    //  margin-right: 0;
+    //}
+    @media only screen and (min-width: $tablet_lg-1) {
+      text-align: left;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    @media only screen and (min-width: $desctop_lg) {
+      font-size: 14px;
+      margin: 40px 0 30px;
+    }
+  }
+  &__link-wrap{
+    @media (min-width: $tablet_xs) and (max-width: $tablet_lg-1) {
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+  &__link{
+    font-size: 14px;
+    line-height: 1.4;
+    color: #ffffff;
+    text-decoration: underline;
+    display: block;
+    margin-bottom: 20px;
+    @media only screen and (min-width: $tablet_xs) {
+      margin-right: 30px;
+      margin-bottom: 0;
+      display: inline-block;
+    }
+    @media only screen and (min-width: $desctop_lg) {
+      margin-right: 40px;
+    }
+    &:last-child{
+      margin: 0;
+    }
+  }
+}
+.social{
+  display: flex;
+  flex-direction: row;
+  &__item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 49px;
+    height: 49px;
+    margin-right: 20px;
+    @include border(2px, solid, #fff);
+    @include border-radius(50%);
+
+    @media only screen and (min-width: $tablet_xs) {
+      width: 48px;
+      height: 47px;
+      margin-right: 18px;
+    }
+    @media only screen and (min-width: $tablet) {
+      width: 51px;
+      height: 50px;
+      margin-right: 25px;
+    }
+    @media only screen and (min-width: $tablet_lg) {
+      width: 48px;
+      height: 47px;
+    }
+    @media only screen and (min-width: $desctop_lg) {
+      width: 65px;
+      height: 64px;
+    }
+    &:last-child{
+      margin-right: 0;
+    }
+    &--fb{
+      &:hover{
+        border-color:transparent;
+        background-color: #3b5998;
+      }
+    }
+    &--vk{
+      &:hover{
+        border-color:transparent;
+        background-color: #4c75a3;
+      }
+    }
+    &--skype{
+      &:hover{
+        border-color:transparent;
+        background-color: #00aff0;
+      }
+    }
+  }
+  &__item-icon{
+    &--fb{
+        font-size: 20px;
+      @media only screen and (min-width: $desctop_lg) {
+        font-size: 28px;
+      }
+    }
+    &--vk{
+        font-size: 12px;
+      @media only screen and (min-width: $desctop_lg) {
+        font-size: 18px;
+      }
+
+    }
+    &--skype{
+        font-size: 18px;
+      @media only screen and (min-width: $desctop_lg) {
+        font-size: 26px;
+      }
+    }
+  }
+}

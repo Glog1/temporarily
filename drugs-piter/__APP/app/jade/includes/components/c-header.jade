@@ -1,0 +1,59 @@
+header.c-header
+    .c-header__top-line
+        .container
+            .row
+                .col-md-6.col-sm-6.c-header__logo-wrap
+                    a(href="/").c-header__logo
+                        +icon('logo','c-header__logo-icon')
+                    .c-header__desc
+                        p.c-header__subcaption Региональная общественная организация
+                        h2.c-header__caption питер без наркотиков
+                .col-md-6.col-sm-6.c-header__phone-wrap
+                    +icon('hours','c-header__hours-icon')
+                    .c-header__phones
+                        span.c-header__phone-caption Бесплатная анонимная горячая линия
+                        a(href="tel:88123226929").c-header__phone 8 (812) 322-69-29
+                        a(href="tel:89216409575").c-header__phone 8 (921) 640-95-75
+    .c-navigation-wrap
+        .custom-container
+            .row
+                //Desctop menu
+                nav.c-navigation.c-navigation--table
+                    a(href="#").c-navigation__item О нас
+                    a(href="#").c-navigation__item Лечение наркомании
+                    a(href="#").c-navigation__item Лечение алкоголизма
+                    a(href="#").c-navigation__item Реабилитация
+                    a(href="#").c-navigation__item Родственникам
+                    a(href="#").c-navigation__item Стоимость
+                    a(href="#").c-navigation__item Контакты
+                //Mobile menu
+                ul.c-navigation.c-navigation--mobile
+                    li.c-navigation__mobile-item
+                        a.c-navigation__item
+                            | О нас
+                            +icon('arrow-left','c-navigation__item-icon')
+                        ul.c-navigation__sub-menu
+                            li
+                                a(href="#").c-navigation__item.c-navigation__item--sub-menu Стоимость
+                            li
+                                a(href="#").c-navigation__item.c-navigation__item--sub-menu Контакты
+                            li
+                                a(href="#").c-navigation__item.c-navigation__item--sub-menu Родственникам
+                    li.c-navigation__mobile-item
+                        a.c-navigation__item
+                            | Лечение
+                            +icon('arrow-left','c-navigation__item-icon')
+                        ul.c-navigation__sub-menu
+                            li
+                                a(href="#").c-navigation__item.c-navigation__item--sub-menu Лечение наркомании
+                            li
+                                a(href="#").c-navigation__item.c-navigation__item--sub-menu Лечение алкоголизма
+                            li
+                                a(href="#").c-navigation__item.c-navigation__item--sub-menu Реабилитация
+
+
+
+
+
+
+

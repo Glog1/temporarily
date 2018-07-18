@@ -1,0 +1,133 @@
+@import "../includes/vars";
+@import "../includes/mixin";
+
+.c-center-map{
+  background-color: $light;
+  padding: 53px 0;
+  @media (max-width: $tablet_sm-1) and (min-width: $mobile-1) {
+    padding: 53px 0 0;
+  }
+  &__row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+  }
+  &__container{
+    @media only screen and (max-width: $tablet_xs-1) {
+      padding: 0;
+    }
+  }
+  &__bg-map{
+    background: transparent top no-repeat;
+    background-size: 145%;
+    padding: 50px 0 0;
+    @media only screen and (min-width: $mobile-1) {
+      background-position: center;
+      -webkit-background-size: contain;
+      background-size: contain;
+      padding: 100px 0;
+    }
+  }
+  &__left{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex-basis: 50%;
+    max-width: 50%;
+    text-align: right;
+    padding-right: 25px;
+    @media only screen and (min-width: $tablet_sm) {
+      padding-right: 65px;
+    }
+  }
+  &__right{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-basis: 50%;
+    max-width: 50%;
+    @media only screen and (min-width: $tablet_xs) {
+      padding-right: 30px;
+    }
+    @media only screen and (min-width: $tablet_sm) {
+      padding-right: 50px;
+    }
+  }
+  &__bottom{
+    width: 80%;
+    margin: 35px auto 0;
+    text-align: center;
+    @media only screen and (min-width: $tablet_xs) {
+      display: none;
+    }
+  }
+  &__icon{
+    font-size: 70px;
+    margin-bottom: 15px;
+    @media only screen and (min-width: $mobile_sm) {
+      font-size: 117px;
+    }
+    @media only screen and (min-width: $tablet_xs) {
+      font-size: 218px;
+      margin-bottom: 28px;
+    }
+    @media only screen and (min-width: $desctop) {
+      font-size: 239px;
+    }
+  }
+  &__caption{
+    font: 700 21px/.8 $bold-font;
+    span{
+      font-size: 15px;
+    }
+    @media only screen and (min-width: $mobile_sm) {
+      font-size: 34px;
+      span{
+        font-size: 24px;
+      }
+    }
+    @media only screen and (min-width: $tablet_xs) {
+      font-size: 64px;
+      span{
+        font-size: 45px;
+      }
+    }
+    @media only screen and (min-width: $desctop) {
+      font-size: 70px;
+      span{
+        font-size: 50px;
+      }
+    }
+  }
+  &__title{
+    font: 700 18px $bold-font;
+    @media only screen and (min-width: $mobile_sm) {
+      font-size: 27px;
+    }
+    @media only screen and (min-width: $tablet_xs) {
+      margin-bottom: 20px;
+    }
+    @media only screen and (min-width: $desctop) {
+      font-size: 33px;
+    }
+  }
+  &__desc{
+    font-size: 20px;
+    line-height: 1.1;
+    margin-bottom: 36px;
+    b{
+      font-family: $bold-font;
+    }
+    @media only screen and (min-width: $tablet_xs) {
+      margin-bottom: 28px;
+    }
+    @media only screen and (min-width: $desctop) {
+      font-size: 22px;
+    }
+  }
+}
+
+
+
+

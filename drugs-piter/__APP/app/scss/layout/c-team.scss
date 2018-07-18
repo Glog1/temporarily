@@ -1,0 +1,77 @@
+@import "../includes/vars";
+@import "../includes/mixin";
+
+.c-team{
+  padding: 30px 0 40px;
+  @media only screen and (min-width: $tablet_xs) {
+    padding: 60px 0;
+  }
+  &__col{
+    @include g-col;
+    max-width: 100%;
+    flex-basis: 100%;
+    margin-bottom: 60px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+    @media only screen and (min-width: $mobile_sm) {
+      max-width: 50%;
+      flex-basis: 50%;
+    }
+    @media only screen and (min-width: $tablet_xs) {
+      flex-basis: 33.333%;
+      max-width: 33.333%;
+      &:nth-last-child(1),
+      &:nth-last-child(2){
+        margin-bottom: 0;
+      }
+    }
+    @media only screen and (min-width: $tablet_sm) {
+      flex-basis: 20%;
+      max-width: 20%;
+      margin-bottom: 0;
+    }
+  }
+  &__item{
+    text-align: center;
+  }
+  &__picture{
+    margin: 0 auto 40px;
+    @include border-radius(50%);
+    @media only screen and (max-width: $tablet_sm-1) {
+      max-width: 165px;
+    }
+    @media only screen and (min-width: $tablet_xs) {
+      margin-bottom: 50px;
+    }
+  }
+  &__name{
+    margin-bottom: 20px;
+    font-size: 20px;
+    @media(min-width: $tablet_xs) and (max-width: $tablet_lg-1) {
+      font-size: 19px;
+    }
+    @media only screen and (min-width: $tablet) {
+      font-size: 22px;
+    }
+    @media only screen and (min-width: $desctop) {
+      font-size: 24px;
+    }
+
+
+  }
+  &__post{
+    font-family: $italic;
+    font-size: 20px;
+    font-weight: 400;
+    @media only screen and (min-width: $tablet_xs){
+      font-size: 17px;
+    }
+    @media only screen and (min-width: $tablet_lg) {
+      font-size: 20px;
+    }
+    @media only screen and (min-width: $desctop) {
+      font-size: 21px;
+    }
+  }
+}

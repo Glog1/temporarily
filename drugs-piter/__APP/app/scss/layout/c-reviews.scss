@@ -1,0 +1,131 @@
+@import "../includes/vars";
+@import "../includes/mixin";
+.c-review-wrap{
+  padding: 75px 0;
+}
+.c-review{
+  @include g-col;
+  padding: 0;
+  max-width: 100%;
+  flex-basis: 100%;
+  @media only screen and (min-width: $tablet_xs-1) {
+    padding: 0 20px;
+  }
+  @media only screen and (min-width: $desctop) {
+    padding: 0 60px;
+  }
+  &__item-wrap{
+
+    padding: 35px 50px;
+    @media only screen and (max-width: $tablet_xs-1) {
+      padding: 35px 15px 75px;
+    }
+    @media (max-width: $tablet-1) and (min-width: $tablet_xs) {
+      padding: 35px 64px;
+    }
+    @media (max-width: $tablet_lg-1) and (min-width: $tablet) {
+      padding: 35px 80px;
+    }
+  }
+  &__item{
+    padding: 34px 36px;
+    background-color: #fff;
+    @include box-shadow(0, 12px, 32px, 0, rgba(66, 88, 88, 0.24));
+    @include border-radius(10px);
+    @media only screen and (min-width: $tablet_xs-1) {
+      padding: 47px 53px;
+    }
+    @media only screen and (min-width: $desctop) {
+      padding: 53px 56px;
+    }
+  }
+  &__content{
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 35px;
+    @media only screen and (min-width: $mobile_sm) {
+      -webkit-line-clamp: 5;
+    }
+    @media only screen and (min-width: $tablet_xs-1) {
+      margin-bottom: 42px;
+      -webkit-line-clamp: 7;
+    }
+  }
+  &__name{
+    margin-bottom: 28px;
+    @media only screen and (min-width: $tablet_xs-1) {
+      margin-bottom: 35px;
+    }
+    font-size: 24px;
+    @media only screen and (min-width: $tablet_xs) {
+      font-size: 23px;
+    }
+    @media only screen and (min-width: $tablet) {
+      font-size: 26px;
+    }
+    @media only screen and (min-width: $desctop) {
+      font-size: 30px;
+    }
+  }
+  &__text{
+    font-family: $italic;
+    margin-bottom: 20px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+    @media only screen and (max-width: $tablet-1) {
+      font-size: 20px;
+    }
+    @media only screen and (min-width: $tablet_xs-1) {
+      margin-bottom: 30px;
+    }
+  }
+  &__more{
+    font: 22px $bold-font;
+    color: $additional;
+    text-decoration: underline;
+    @media only screen and (min-width: $tablet) {
+      font-size: 23px;
+    }
+    @media only screen and (min-width: $desctop) {
+      font-size: 24px;
+    }
+  }
+  .slick-prev,
+  .slick-next{
+    &:before{
+      @media only screen and (max-width: $tablet_xs-1) {
+        width: 40px;
+        height: 40px;
+        -webkit-background-size: 10px;
+        background-size: 10px;
+      }
+    }
+    @media only screen and (max-width: $tablet_xs-1) {
+      top: initial;
+      bottom: 0;
+
+    }
+  }
+  .slick-prev{
+    @media only screen and (max-width: $tablet_xs-1) {
+      left: 50%;
+      @include translate(-117%, 0)
+    }
+    @media (max-width: $desctop-1) and (min-width: $tablet_lg) {
+      left: -25px;
+    }
+  }
+  .slick-next{
+    @media only screen and (max-width: $tablet_xs-1) {
+      right: 50%;
+      @include translate(117%, 0)
+    }
+    @media (max-width: $desctop-1) and (min-width: $tablet_lg) {
+      right: -25px;
+    }
+  }
+}

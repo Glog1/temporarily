@@ -1,0 +1,9 @@
+@import "_mixins/font-face";
+
+@include font-face("PTSansRegular", "../fonts/PTSansRegular/PTSansRegular");
+@include font-face("PTSansBold", "../fonts/PTSansBold/PTSansBold");
+@include font-face("PTSansItalic", "../fonts/PTSansItalic/PTSansItalic");
+
+@include font-face("Montserrat-ExtraBold", "../fonts/Montserrat-ExtraBold/Montserrat-ExtraBold");
+
+

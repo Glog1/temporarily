@@ -1,0 +1,43 @@
+//Fonts
+$default-font: "PTSansRegular", sans-serif;
+$bold-font: "PTSansBold", sans-serif;
+$italic: "PTSansItalic", sans-serif;
+$monstr: "Montserrat-ExtraBold", sans-serif;
+
+//Color
+$accent: #fc6800;
+$additional: #19e0c2;
+$hovered: #0dbdb3;
+$light: #f5ffff;
+$main: #ededed;
+$dark: #383838;
+$caption: #525252;
+$text: #353535;
+
+
+//Media queries
+$mobile_sm-1: 479px;
+$mobile_sm: 480px;
+$mobile-1: 575px;
+$mobile: 576px;
+$tablet_xs-1: 767px;
+$tablet_xs: 768px;
+$tablet_sm-1: 992px;
+$tablet_sm: 993px;
+$tablet-1: 1024px;
+$tablet: 1025px;
+$tablet_md: 1150px;
+$tablet_lg-1: 1199px;
+$tablet_lg: 1200px;
+$desctop-1: 1366px;
+$desctop: 1367px;
+$desctop_lg: 1650px;
+$large: 1920px;
+
+// Customization Bootstrap vars from "app/libs/bootstrap/scss/_variables.scss"
+$grid-gutter-width: 30px;
+$grid-columns: 12;
+$grid-breakpoints: (xs: 0, sm: 768px, md: 1025px, lg: 1200px, xl: 1367px);
+$container-max-widths: (lg: 1170px, xl: 1360px);
+
+$gutter: $grid-gutter-width;

@@ -1,0 +1,107 @@
+@import "../includes/vars";
+@import "../includes/mixin";
+
+.c-documents {
+  padding: 45px 0;
+  background: transparent no-repeat bottom;
+  @media only screen and (min-width: $tablet_xs) {
+    padding: 65px 0;
+  }
+  &__row{
+    @media (max-width: $tablet_lg-1) and (min-width: $tablet_xs) {
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+  }
+  &__caption{
+    font: 36px $bold-font;
+    margin-bottom: 30px;
+    text-align: center;
+    @media (max-width: $tablet_sm-1) and (min-width: $tablet_xs) {
+      font-size: 32px;
+    }
+    @media only screen and (min-width: $tablet_xs) {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+    @media only screen and (min-width: $tablet) {
+      font-size: 46px;
+      margin-bottom: 40px;
+    }
+    @media only screen and (min-width: $desctop) {
+      font-size: 50px;
+      margin-bottom: 45px;
+    }
+  }
+  &__desc{
+    text-align: center;
+    margin-bottom: 26px;
+    @media only screen and (min-width: $tablet_xs) {
+      text-align: left;
+      margin-bottom: 0;
+    }
+  }
+  &__text{
+    font-size: 18px;
+    text-align: center;
+    max-width: 340px;
+    margin: 0 auto;
+  }
+  &__garant{
+    color: $additional;
+    font: 36px $bold-font;
+    text-align: center;
+    margin-bottom: 15px;
+    span{
+      font-size: 56px;
+      display: block;
+    }
+    @media only screen and (min-width: $mobile_sm) {
+      font-size: 44px;
+    }
+    @media (max-width: $tablet_sm-1) and (min-width: $tablet_xs) {
+      font-size: 38px;
+    }
+    @media only screen and (min-width: $tablet_xs) {
+      margin-bottom: 44px;
+    }
+    @media only screen and (min-width: $tablet) {
+      font-size: 48px;
+      margin-bottom: 30px;
+      span{
+        font-size: 66px;
+      }
+    }
+    @media only screen and (min-width: $desctop) {
+      font-size: 54px;
+      span{
+        font-size: 74px;
+      }
+    }
+  }
+}
+.c-documents-slider{
+  padding: 0;
+  margin-top: 45px;
+  @media only screen and (max-width: $tablet_xs-1) {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  @media only screen and (min-width: $tablet) {
+    margin-top: 60px;
+
+  }
+  @media only screen and (min-width: $tablet_lg) {
+    margin-left: -25px;
+    margin-right: -25px;
+  }
+  &__item{
+    padding: 0 15px;
+    @media only screen and (min-width: $tablet_lg) {
+      padding: 0 25px;
+    }
+  }
+  &__img{
+    margin: 0 auto;
+  }
+}

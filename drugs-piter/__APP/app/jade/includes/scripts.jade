@@ -1,0 +1,18 @@
+//Modal
+include ./components/c-modal.jade
+script(src="js/scripts.min.js")
+script.
+    function initMap() {
+        var uluru = {lat: 59.942306, lng: 30.282646};
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 16,
+            center: uluru
+        });
+        var image = 'img/icon/marker.svg';
+        var marker = new google.maps.Marker({
+            position: uluru,
+            map: map,
+            icon: image
+        });
+    }
+script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZIOVlLdQbI7U_aQQU1msO3zaHHRgimFQ&callback=initMap" async defer)

@@ -1,0 +1,166 @@
+@import "../includes/vars";
+@import "../includes/mixin";
+
+.c-centers {
+  padding: 0 0 45px;
+  background-color: $light;
+  &__buttons {
+    text-align: center;
+    margin: 40px 0;
+    @media only screen and (max-width: $tablet_xs-1) {
+      display: flex;
+      flex-direction: column;
+    }
+    @media only screen and (min-width: $desctop) {
+      margin: 50px 0;
+    }
+  }
+  &__btn {
+    margin: 6px auto;
+    @media only screen and (min-width: $tablet_xs) {
+      margin: 6px;
+    }
+    @media only screen and (min-width: $tablet_sm) {
+      margin: 6px 20px;
+    }
+    @media only screen and (min-width: $tablet) {
+      margin: 0 25px;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -1px;
+  }
+  &__item{
+    @include g-col;
+    padding: 1px;
+    flex-basis: 100%;
+    max-width: 100%;
+    @media only screen and (min-width: $mobile_sm) {
+      flex-basis: 50%;
+      max-width: 50%;
+    }
+    @media only screen and (min-width: $tablet_xs) {
+      flex-basis: 33.333%;
+      max-width: 33.333%;
+    }
+    @media only screen and (min-width: $tablet_sm) {
+      flex-basis: 25%;
+      max-width: 25%;
+    }
+  }
+}
+
+.c-center {
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  @include border-radius(10px);
+  &__caption {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(to top, #0eaeae 0%, rgba(141, 219, 219, 0.68) 55%, rgba(245, 255, 255, 0) 100%);
+    padding: 14px 18px;
+    min-height: 45%;
+    @include transition(all, .6s, ease);
+    @media only screen and (min-width: $tablet) {
+      padding: 20px 26px;
+    }
+
+  }
+  &__title {
+    font: 24px $bold-font;
+    color: #ffffff;
+    @media only screen and (min-width: $tablet_xs) {
+      font-size: 25px;
+    }
+    @media only screen and (min-width: $tablet) {
+      font-size: 28px;
+    }
+    @media only screen and (min-width: $desctop) {
+    font-size: 36px;
+  }
+  }
+  &__sub-title {
+    font: 14px $bold-font;
+    color: #ffffff;
+    @media only screen and (min-width: $mobile_sm) {
+      font-size: 12px;
+    }
+    @media only screen and (min-width: $tablet) {
+      font-size: 14px;
+    }
+    @media only screen and (min-width: $desctop) {
+      font-size: 16px;
+    }
+  }
+  &__back{
+    position: absolute;
+    left: 0;
+    top: 150%;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(15, 169, 167, .74);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    //@include scale(.5);
+    @include transition(all, .8s, ease);
+  }
+  &__back-title{
+    font: 28px $bold-font;
+    color: #ffffff;
+    @media only screen and (min-width: $tablet) {
+      font-size: 32px;
+    }
+    @media only screen and (min-width: $desctop) {
+      font-size: 41px;
+    }
+  }
+  &__back-sub-title{
+    color: #ffffff;
+    font: 11px $bold-font;
+    @media only screen and (min-width: $tablet) {
+      font-size: 13px;
+    }
+    @media only screen and (min-width: $desctop) {
+      font-size: 16px;
+    }
+  }
+  &__price{
+    color: #ffffff;
+    font: 18px $bold-font;
+    margin: 24px 0;
+    text-align: center;
+    @media only screen and (min-width: $tablet) {
+      font-size: 20px;
+    }
+    @media only screen and (min-width: $desctop) {
+      font-size: 25px;
+    }
+  }
+  &:hover{
+    .c-center__back{
+      opacity: 1;
+      visibility: visible;
+      top: 0;
+      //@include scale(1);
+    }
+    .c-center__caption{
+      opacity: 0;
+      //transform: translate(0, 100%);
+      visibility: hidden;
+
+    }
+  }
+}
+
