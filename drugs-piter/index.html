@@ -3,7 +3,8 @@
 <!--include Head-->
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!--<meta name="viewport" content="width=device-width,initial-scale=1">-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <meta charset="UTF-8">
   <title>Питер без наркотиков</title>
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
@@ -640,36 +641,39 @@
           <div class="col-md-4 col-sm-4">
             <div class="c-filter__wrapp"><span class="c-filter__label">Проблема:</span>
               <div class="c-filter" data-main="a">
-                <div class="c-filter__caption-wrap"><span class="c-filter__caption">Выберите</span>
+                <div class="c-filter__caption-wrap"><span class="c-filter__caption js-value-name">Выберите</span>
+                  <input class="js-value-input" type="hidden" value="" name="problem">
                   <svg class="icon icon-arrow-down c-filter__icon">
                     <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
                   </svg>
                 </div>
-                <div class="c-filter__dropdown" data-child="a"><a class="c-filter__item" href="#">Проблема</a><a class="c-filter__item" href="#">Пробовали лечить?</a><a class="c-filter__item" href="#">Желаемый результат?</a></div>
+                <div class="c-filter__dropdown" data-child="a"><a class="c-filter__item" data-value="Проблема">Проблема</a><a class="c-filter__item" data-value="Пробовали лечить?">Пробовали лечить?</a><a class="c-filter__item" data-value="Желаемый результат?">Желаемый результат?</a></div>
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-4">
             <div class="c-filter__wrapp"><span class="c-filter__label">Пробовали лечить?</span>
               <div class="c-filter" data-main="b">
-                <div class="c-filter__caption-wrap"><span class="c-filter__caption">Выберите</span>
+                <div class="c-filter__caption-wrap"><span class="c-filter__caption js-value-name">Выберите</span>
+                  <input class="js-value-input" type="hidden" value="" name="tried-treat">
                   <svg class="icon icon-arrow-down c-filter__icon">
                     <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
                   </svg>
                 </div>
-                <div class="c-filter__dropdown" data-child="b"><a class="c-filter__item" href="#">Проблема</a><a class="c-filter__item" href="#">Пробовали лечить?</a><a class="c-filter__item" href="#">Желаемый результат?</a></div>
+                <div class="c-filter__dropdown" data-child="b"><a class="c-filter__item" data-value="Проблема">Проблема</a><a class="c-filter__item" data-value="Пробовали лечить?">Пробовали лечить?</a><a class="c-filter__item" data-value="Желаемый результат?">Желаемый результат?</a></div>
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-4">
             <div class="c-filter__wrapp"><span class="c-filter__label">Желаемый результат?</span>
               <div class="c-filter" data-main="c">
-                <div class="c-filter__caption-wrap"><span class="c-filter__caption">Выберите</span>
+                <div class="c-filter__caption-wrap"><span class="c-filter__caption js-value-name">Выберите</span>
+                  <input class="js-value-input" type="hidden" value="" name="result">
                   <svg class="icon icon-arrow-down c-filter__icon">
                     <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
                   </svg>
                 </div>
-                <div class="c-filter__dropdown" data-child="c"><a class="c-filter__item" href="#">Проблема</a><a class="c-filter__item" href="#">Пробовали лечить?</a><a class="c-filter__item" href="#">Желаемый результат?</a></div>
+                <div class="c-filter__dropdown" data-child="c"><a class="c-filter__item" data-value="Проблема">Проблема</a><a class="c-filter__item" data-value="Пробовали лечить?">Пробовали лечить?</a><a class="c-filter__item" data-value="Желаемый результат?">Желаемый результат?</a></div>
               </div>
             </div>
           </div>
@@ -678,12 +682,13 @@
           <div class="col-md-4 col-sm-4">
             <div class="c-filter__wrapp"><span class="c-filter__label">Кем вам приходится зависимый?</span>
               <div class="c-filter" data-main="d">
-                <div class="c-filter__caption-wrap"><span class="c-filter__caption">Выберите</span>
+                <div class="c-filter__caption-wrap"><span class="c-filter__caption js-value-name">Выберите</span>
+                  <input class="js-value-input" type="hidden" value="" name="depend">
                   <svg class="icon icon-arrow-down c-filter__icon">
                     <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
                   </svg>
                 </div>
-                <div class="c-filter__dropdown" data-child="d"><a class="c-filter__item" href="#">Проблема</a><a class="c-filter__item" href="#">Пробовали лечить?</a><a class="c-filter__item" href="#">Желаемый результат?</a></div>
+                <div class="c-filter__dropdown" data-child="d"><a class="c-filter__item" data-value="Проблема">Проблема</a><a class="c-filter__item" data-value="Пробовали лечить?">Пробовали лечить?</a><a class="c-filter__item" data-value="Желаемый результат?">Желаемый результат?</a></div>
               </div>
             </div>
           </div>
