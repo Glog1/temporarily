@@ -32,24 +32,9 @@ body {
   color: $caption;
   margin: 0;
 
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -ms-touch-action: pan-y;
-  touch-action: pan-y;
-
   * {
     outline: none;
     box-sizing: border-box;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    -ms-touch-action: pan-y;
-    touch-action: pan-y;
     &:hover,
     &:focus {
       outline: none;
@@ -677,10 +662,9 @@ body .margin-top{
       padding: 55px 48px;
     }
   }
-
-  .fancybox-close-small{
-    display: none;
-  }
 }
-
+.c-modal .fancybox-close-small{color: #ffffff;}
+.c-modal.c-modal--cost .fancybox-close-small{right: 15px;}
+.fancybox-bg{top: -10%; bottom: -10%}
+@media only screen and (min-width:575px){.c-modal .fancybox-close-small{display: none} }
 //@import "includes/media"; // Always at the end
