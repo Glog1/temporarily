@@ -61,46 +61,50 @@ section.main-section
                             span.c-filter__label Проблема:
                             .c-filter(data-main="a")
                                 .c-filter__caption-wrap
-                                    span.c-filter__caption Выберите
+                                    span.c-filter__caption.js-value-name Выберите
+                                    input(type="hidden" value="" name="problem").js-value-input
                                     +icon('arrow-down','c-filter__icon')
                                 .c-filter__dropdown(data-child="a")
-                                    a.c-filter__item(href='#') Проблема
-                                    a.c-filter__item(href='#') Пробовали лечить?
-                                    a.c-filter__item(href='#') Желаемый результат?
+                                    a.c-filter__item(data-value="Проблема") Проблема
+                                    a.c-filter__item(data-value="Пробовали лечить?") Пробовали лечить?
+                                    a.c-filter__item(data-value="Желаемый результат?") Желаемый результат?
                     .col-md-4.col-sm-4
                         .c-filter__wrapp
                             span.c-filter__label Пробовали лечить?
                             .c-filter(data-main="b")
                                 .c-filter__caption-wrap
-                                    span.c-filter__caption Выберите
+                                    span.c-filter__caption.js-value-name Выберите
+                                    input(type="hidden" value="" name="tried-treat").js-value-input
                                     +icon('arrow-down','c-filter__icon')
                                 .c-filter__dropdown(data-child="b")
-                                    a.c-filter__item(href='#') Проблема
-                                    a.c-filter__item(href='#') Пробовали лечить?
-                                    a.c-filter__item(href='#') Желаемый результат?
+                                    a.c-filter__item(data-value="Проблема") Проблема
+                                    a.c-filter__item(data-value="Пробовали лечить?") Пробовали лечить?
+                                    a.c-filter__item(data-value="Желаемый результат?") Желаемый результат?
                     .col-md-4.col-sm-4
                         .c-filter__wrapp
                             span.c-filter__label Желаемый результат?
                             .c-filter(data-main="c")
                                 .c-filter__caption-wrap
-                                    span.c-filter__caption Выберите
+                                    span.c-filter__caption.js-value-name Выберите
+                                    input(type="hidden" value="" name="result").js-value-input
                                     +icon('arrow-down','c-filter__icon')
                                 .c-filter__dropdown(data-child="c")
-                                    a.c-filter__item(href='#') Проблема
-                                    a.c-filter__item(href='#') Пробовали лечить?
-                                    a.c-filter__item(href='#') Желаемый результат?
+                                    a.c-filter__item(data-value="Проблема") Проблема
+                                    a.c-filter__item(data-value="Пробовали лечить?") Пробовали лечить?
+                                    a.c-filter__item(data-value="Желаемый результат?") Желаемый результат?
                 .row.c-form__row
                     .col-md-4.col-sm-4
                         .c-filter__wrapp
                             span.c-filter__label Кем вам приходится зависимый?
                             .c-filter(data-main="d")
                                 .c-filter__caption-wrap
-                                    span.c-filter__caption Выберите
+                                    span.c-filter__caption.js-value-name Выберите
+                                    input(type="hidden" value="" name="depend").js-value-input
                                     +icon('arrow-down','c-filter__icon')
                                 .c-filter__dropdown(data-child="d")
-                                    a.c-filter__item(href='#') Проблема
-                                    a.c-filter__item(href='#') Пробовали лечить?
-                                    a.c-filter__item(href='#') Желаемый результат?
+                                    a.c-filter__item(data-value="Проблема") Проблема
+                                    a.c-filter__item(data-value="Пробовали лечить?") Пробовали лечить?
+                                    a.c-filter__item(data-value="Желаемый результат?") Желаемый результат?
                     .col-md-4.col-sm-4
                         .c-form__label-wrap
                             label.c-form__label Ваше имя:
